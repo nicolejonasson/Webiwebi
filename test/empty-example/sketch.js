@@ -8,6 +8,7 @@ function setup() {
 function draw() {
   background(150);
   fill(255,0,0);
+  noStroke();
   rect(20,20,100,100);
 
 

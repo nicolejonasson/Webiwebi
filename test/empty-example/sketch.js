@@ -16,8 +16,8 @@ function draw() {
   ambientLight(100);
   directionalLight(255,255,255,1,-1,0);
   rotateX(angle);
-  rotateY(angle*1.3);
-  rotateZ(angle*0.7);
+  rotateY(mouseY);
+  rotateZ(mouseX);
   texture(img);
   box(100);
 

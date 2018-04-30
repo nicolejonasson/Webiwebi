@@ -1,6 +1,32 @@
 @font-face {
 font-family: 'NoMono';
 src:
- url('https://rawgit.com/nicolejonasson/Type/gh-pages/Type_test/NoMono-Regular')
+ url('https://rawgit.com/nicolejonasson/Type/gh-pages/Type_test/AA_Knif-mono.woff')
   format('woff');
+}
+
+p{
+  font-family: 'NoMono';
+  font-size: 50 px;
+}
+
+.content{
+  display:flex;
+}
+
+
+.google_docs{
+  flex:50%;
+  margin: 10px;
+  padding: 50px;
+  border: black;
+  background-color: blue;
+}
+
+iframe{
+  flex: 100%;
+  width: 100%;
+  filter: drop-shadow(10px 10px 4px grey);
+  border:none;
+
 }

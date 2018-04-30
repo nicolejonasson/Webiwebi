@@ -16,7 +16,7 @@
     function makeApiCall() {
       var params = {
         // The ID of the spreadsheet to retrieve data from.
-        spreadsheetId: '1sU0wG8V5Dtjf553hU6i0LlBu3Gf9aU9UX6PvMj1oTPY',  // TODO: Update placeholder value.
+        spreadsheetId: '11_A4rN9aKspCnO2dBdff7CEY1g8ScbD6TOCFoy16dus',  // TODO: Update placeholder value.
 
         // The A1 notation of the values to retrieve.
         range: 'Ark1!3:1',  // TODO: Update placeholder value.
@@ -36,6 +36,7 @@
       request.then(function(response) {
         // TODO: Change code below to process the `response` object:
         console.log(response.result);
+        populateSheet(response.result);
       }, function(reason) {
         console.error('error: ' + reason.result.error.message);
       });
@@ -81,6 +82,14 @@
 
     function handleSignOutClick(event) {
       gapi.auth2.getAuthInstance().signOut();
+    }
+
+    function populateSheet(result){
+      for(var row=0; row<8; row++){
+        for (var col = 0; col<3;col++){
+          document.getElementById(row+":"+col).value = result.values[row][col];
+        }
+      }
     }
     </script>
     <script async defer src="https://apis.google.com/js/api.js"

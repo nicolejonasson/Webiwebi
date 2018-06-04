@@ -1,0 +1,81 @@
+<!doctype html>
+<!-- See http://www.firepad.io/docs/ for detailed embedding docs. -->
+<html>
+
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+
+  <!-- CodeMirror -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.css" />
+
+  <!-- Firepad -->
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <script src="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.min.js"></script>
+
+
+</head>
+
+<body onload="init()">
+
+    <div id = "head"> <p>welcome</p></div>
+    <!-- <div id = "text">
+     <p>This is a platform for sharing and caring. </p>
+     <p>Please fell free to share all the things you care about. </p>
+     <p>Please feel free to share all the things you care about. </p>
+     <p>You can write in all the boxes and whatever. </p>
+     <p>Do your thing, bla bla bla</p>
+   </div> -->
+    <!-- <div><img src="2.jpg"></div> -->
+    <div id="image"> <img src="2.jpg"> </div>
+
+
+  <div class = firepad-wrapper>
+    <div class =" box" id="firepad-0"></div>
+    <div class =" box" id="firepad-1"></div>
+    <div class =" box" id="firepad-2"></div>
+    <div class =" box" id="firepad-3"></div>
+    <div class =" box" id="firepad-4"></div>
+    <div class =" box" id="firepad-5"></div>
+    <div class =" box" id="firepad-6"></div>
+    <div class =" box" id="firepad-7"></div>
+    <div class =" box" id="firepad-8"></div>
+    <!-- <div class =" box"  id="image"> <img src="1.jpg"> </div> -->
+  </div>
+
+
+  <script>
+    function init() {
+      // // Initialize Firebase.
+      // // TODO: replace with your Firebase project configuration.
+      var config = {
+        apiKey: "AIzaSyDTLvn12YhyZ86R_zHw2AauWa8swoJwRZc",
+        authDomain: "collab-6fa95.firebaseapp.com",
+        databaseURL: "https://collab-6fa95.firebaseio.com",
+        projectId: "collab-6fa95",
+        storageBucket: "collab-6fa95.appspot.com",
+        messagingSenderId: "942968685131"
+
+      };
+      firebase.initializeApp(config);
+
+
+      for (var i = 0; i < 9; i++) {
+
+        var firepadRef = firebase.database().ref("box"+i);
+
+        var codeMirror = CodeMirror(document.getElementById("firepad-"+i), { lineWrapping: true });
+
+        var firepad = Firepad.fromCodeMirror(firepadRef, codeMirror, {
+          richTextShortcuts: true,
+          richTextToolbar: false,
+        });
+      }
+  }
+
+
+  </script>
+</body>

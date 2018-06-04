@@ -1,0 +1,353 @@
+@font-face {
+font-family: 'CT';
+src:
+ url('https://rawgit.com/nicolejonasson/CollaborativeTypeface/gh-pages/Type/CT-Regular.ttf');
+}
+html { height: 100%; }
+body { margin: 0; height: 100%; position: relative; }
+
+
+#head{
+  margin: -80px 1100px 0px 20px;
+  background: rgb(249, 246, 239);
+  /* border: 1px solid black; */
+  border-radius: 25px;
+  text-align: center;
+  position: relative;
+  font-family: "ct";
+  font-size: 100px;
+  color: black;
+  box-shadow:  -5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+#text{
+  text-align: left;
+  position: relative;
+  font-size: 15px;
+
+}
+
+.firepad-wrapper{
+  /* display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center; */
+  margin-left: 800px;
+  margin-right: 20px;
+  margin-top: -220px;
+  height: 800px;
+  display: grid;
+  grid-template-columns: repeat(10, 2fr);
+  grid-template-rows: repeat(10,2fr);
+
+}
+
+
+.box{
+  /* margin: 10px; */
+
+}
+
+/* .box:hover{
+  z-index: 1;
+} */
+
+ /* #firepad-0, #firepad-1, #firepad-2, #firepad-3, #firepad-4, #firepad-5, #firepad-6, #firepad-7, #firepad-8, #firepad-9.firepad-richtext .CodeMirror{
+  margin: 50px;
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px grey;
+} */
+
+
+#firepad-0{
+  /* background: #e8e6ef; */
+  grid-row: 1/span 10;
+  grid-column: 1/span 10;
+
+}
+
+#firepad-1{
+  /* background: #e8e6ef; */
+  grid-row: 1/span 10;
+  grid-column: 2/span 9;
+}
+
+#firepad-2{
+  /* background: #e8e6ef; */
+  grid-row:1/span 10;
+  grid-column: 3/span 8;
+}
+
+#firepad-3{
+  /* background: #e8e6ef; */
+  grid-row: 1/span 10;
+  grid-column: 4/span 7;
+}
+
+#firepad-4{
+  /* background: #e8e6ef; */
+  grid-row: 1/span 10;
+  grid-column: 5/span 6;
+}
+
+#firepad-5{
+  /* background: #e8e6ef; */
+  grid-row: 1/span 10;
+  grid-column: 6/span 5;
+}
+#firepad-6{
+  /* background: #e8e6ef; */
+  grid-row: 1/span 10;
+  grid-column: 7/span 4;
+}
+
+#firepad-7{
+  /* background: #e8e6ef; */
+  grid-row: 1/span 10;
+  grid-column: 8/span 3;
+}
+
+#firepad-8{
+  /* background: #e8e6ef; */
+  grid-row: 1/span 10;
+  grid-column: 9/span 2;
+}
+
+
+
+
+/* #image {
+  grid-row: 1/span 2;
+  grid-column:1/span 2;
+  z-index: -1;
+
+} */
+
+#image img{
+  margin-top:-100px;
+  height: 800px;
+  width: auto;
+  float:left;
+}
+
+
+
+.firepad {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: left;
+  line-height: normal;
+}
+
+.firepad .CodeMirror {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: auto;
+}
+
+.firepad-richtext .CodeMirror{
+  --bg-color: rgb(249, 246, 239,0.5);
+  --text-color: black;
+  --text-size: 10px;
+  --text-hover:50px;
+  --box-shadow:  -5px 5px 20px rgba(0, 0, 0, 0.1);
+  --border-radius: 15px;
+  --bg-hover:rgba(200,200,200);
+  --border: 0px solid grey;
+  --type: "times new roman";
+}
+
+#firepad-0 .firepad-richtext .CodeMirror {
+  /* margin: 0px; */
+  padding: 20px;
+  font-family: var(--type);
+  border-radius: var(--border-radius);
+  font-size: var(--text-size);
+  color: var(--text-color);
+  border: var(--border);
+  background: var(--bg-color);
+  /* background: #f7f7f7; */
+  z-index: 0;
+  box-shadow: var(--box-shadow);
+}
+
+#firepad-1 .firepad-richtext .CodeMirror {
+  /* margin: 5px; */
+  padding: 20px;
+  font-family: var(--type);
+  border-radius: var(--border-radius);
+  font-size: var(--text-size);
+  color: var(--text-color);
+  border: var(--border);
+  background: var(--bg-color);
+  /* background: #f7f7f7; */
+  z-index: 0;
+  box-shadow: var(--box-shadow);
+}
+
+#firepad-2 .firepad-richtext .CodeMirror {
+  /* margin: 10px; */
+  padding: 20px;
+  font-family: var(--type);
+  border-radius: var(--border-radius);
+  font-size: var(--text-size);
+  color: var(--text-color);
+  border: var(--border);
+  background:var(--bg-color);
+  /* background: #f7f7f7; */
+  z-index: 0;
+  box-shadow: var(--box-shadow);
+}
+
+#firepad-3 .firepad-richtext .CodeMirror {
+  /* margin: 15px; */
+  padding: 20px;
+  font-family: var(--type);
+  border-radius: var(--border-radius);
+  font-size: var(--text-size);
+  color: var(--text-color);
+  border: var(--border);
+  background: var(--bg-color);
+  /* background: #f7f7f7; */
+  z-index: 0;
+  box-shadow: var(--box-shadow);
+}
+
+#firepad-4 .firepad-richtext .CodeMirror {
+  /* margin: 20px; */
+  padding: 20px;
+  font-family: var(--type);
+  border-radius: var(--border-radius);
+  font-size: var(--text-size);
+  color: var(--text-color);
+  border: var(--border);
+  background: var(--bg-color);
+  /* background: #f7f7f7; */
+  z-index: 0;
+  box-shadow: var(--box-shadow);
+}
+
+#firepad-5 .firepad-richtext .CodeMirror {
+  /* margin: 25px; */
+  padding: 20px;
+  font-family: var(--type);
+  border-radius: var(--border-radius);
+  font-size: var(--text-size);
+  color: var(--text-color);
+  border: var(--border);
+  background: var(--bg-color);
+  /* background: #f7f7f7; */
+  z-index: 0;
+  box-shadow: var(--box-shadow);
+}
+
+#firepad-6 .firepad-richtext .CodeMirror {
+  /* margin: 30px; */
+  padding: 20px;
+  font-family: var(--type);
+  border-radius: var(--border-radius);
+  font-size:var(--text-size);
+  color: var(--text-color);
+  border: var(--border);
+  background: var(--bg-color);
+  /* background: #f7f7f7; */
+  z-index: 0;
+  box-shadow: var(--box-shadow);
+}
+
+#firepad-7 .firepad-richtext .CodeMirror {
+  /* margin: 35px; */
+  padding: 20px;
+  font-family: var(--type);
+  border-radius: var(--border-radius);
+  font-size: var(--text-size);
+  color: var(--text-color);
+  border: var(--border);
+  background: var(--bg-color);
+  /* background: #f7f7f7; */
+  z-index: 0;
+  box-shadow: var(--box-shadow);
+}
+
+#firepad-8 .firepad-richtext .CodeMirror {
+  /* margin: 40px; */
+  padding: 40px;
+  font-family: var(--type);
+  font-size: var(--text-size);
+  border-radius: var(--border-radius);
+  color: var(--text-color);
+  border: var(--border);
+  background: var(--bg-color);
+  /* background: #f7f7f7; */
+  z-index: 1;
+  box-shadow: var(--box-shadow);
+}
+
+
+
+#firepad-0 .firepad-richtext .CodeMirror:hover{
+  background: var(--bg-hover);
+  font-size: var(--text-hover);
+  z-index: 2;
+}
+
+#firepad-1 .firepad-richtext .CodeMirror:hover{
+  background: var(--bg-hover);
+  font-size: var(--text-hover);
+  z-index: 2;
+}
+
+#firepad-2 .firepad-richtext .CodeMirror:hover{
+  background: var(--bg-hover);
+  font-size: var(--text-hover);
+  z-index: 2;
+}
+
+#firepad-3 .firepad-richtext .CodeMirror:hover{
+  background: var(--bg-hover);
+  font-size: var(--text-hover);
+  z-index: 2;
+}
+
+#firepad-4 .firepad-richtext .CodeMirror:hover{
+  background: var(--bg-hover);
+  font-size: var(--text-hover);
+  z-index: 2;
+}
+
+#firepad-5 .firepad-richtext .CodeMirror:hover{
+  background: var(--bg-hover);
+  font-size: var(--text-hover);
+  z-index: 2;
+}
+
+#firepad-6 .firepad-richtext .CodeMirror:hover{
+  background: var(--bg-hover);
+  font-size: var(--text-hover);
+  z-index: 2;
+}
+
+#firepad-7 .firepad-richtext .CodeMirror:hover{
+  background: var(--bg-hover);
+  font-size: var(--text-hover);
+  z-index: 2;
+}
+
+#firepad-8 .firepad-richtext .CodeMirror:hover{
+  background: var(--bg-hover);
+  font-size: var(--text-hover);
+  z-index: 2;
+}
+
+
+.firepad-spacer {
+  height: 10px;
+  width: 1px;
+}

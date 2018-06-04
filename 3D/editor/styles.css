@@ -1,0 +1,257 @@
+@font-face {
+font-family: 'CT';
+src:
+ url('https://rawgit.com/nicolejonasson/CollaborativeTypeface/gh-pages/Type/CT-Regular.ttf');
+}
+html { height: 100%; }
+body { margin: 0; height: 100%; position: relative; }
+
+#head{
+  margin: 10px auto 10px auto;
+  text-align: center;
+  position: relative;
+  font-family: "ct";
+  font-size: 15px;
+  color: red;
+  padding: 50px;
+}
+
+.firepad-wrapper{
+  /* display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center; */
+  margin-top:100px;
+  height: 800px;
+  display: grid;
+  grid-template-columns: repeat(10, 2fr);
+  grid-template-rows: repeat(10,2fr);
+
+}
+
+
+.box{
+  margin: 10px;
+  /* width: 500px;
+  height: 700px; */
+}
+
+/* .box:hover{
+  z-index: 1;
+} */
+
+
+
+#firepad-0{
+  /* background: #e8e6ef; */
+  grid-row: 2/span 4;
+  grid-column: 3/span 4;
+
+}
+
+#firepad-1{
+  /* background: #e8e6ef; */
+  grid-row: 3/span 6;
+  grid-column: 5/span 3;
+}
+
+#firepad-2{
+  /* background: #e8e6ef; */
+  grid-row: 6/span 2;
+  grid-column: 7/span 3;
+}
+
+#firepad-3{
+  /* background: #e8e6ef; */
+  grid-row: 7/span 3;
+  grid-column: 2/span 5;
+}
+
+#firepad-4{
+  /* background: #e8e6ef; */
+  grid-row: 1/span 6;
+  grid-column: 4/span 2;
+}
+
+#firepad-5{
+  /* background: #e8e6ef; */
+  grid-row: 5/span 8;
+  grid-column: 8/span 1;
+}
+
+#text{
+  margin-top: 0px;
+  grid-row: 1/span 10;
+  grid-column: 1/span 10;
+  z-index: -1;
+  font-family: "CT";
+  font-size: 200px;
+  color:black;
+  /* line-height: 2; */
+  text-align: center;
+}
+
+
+
+.firepad {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: left;
+  line-height: normal;
+}
+
+.firepad .CodeMirror {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: auto;
+}
+
+.firepad-richtext .CodeMirror{
+  --bg-color: rgb(249, 246, 239,0.5);
+  --text-color: black;
+  --text-size: 10px;
+  --text-hover:20px;
+  --box-shadow:  -5px 5px 20px rgba(0, 0, 0, 0.1);
+  --border-radius: 15px;
+  --bg-hover:rgba(200,200,200);
+  --border: 0px solid grey;
+  --type: "times new roman";
+}
+
+#firepad-0 .firepad-richtext .CodeMirror {
+  /* margin: 0px; */
+  padding: 20px;
+  font-family: var(--type);
+  border-radius: var(--border-radius);
+  font-size: var(--text-size);
+  color: var(--text-color);
+  border: var(--border);
+  background: var(--bg-color);
+  /* background: #f7f7f7; */
+  z-index: 0;
+  box-shadow: var(--box-shadow);
+}
+
+#firepad-1 .firepad-richtext .CodeMirror {
+  /* margin: 5px; */
+  padding: 20px;
+  font-family: var(--type);
+  border-radius: var(--border-radius);
+  font-size: var(--text-size);
+  color: var(--text-color);
+  border: var(--border);
+  background: var(--bg-color);
+  /* background: #f7f7f7; */
+  z-index: 0;
+  box-shadow: var(--box-shadow);
+}
+
+#firepad-2 .firepad-richtext .CodeMirror {
+  /* margin: 10px; */
+  padding: 20px;
+  font-family: var(--type);
+  border-radius: var(--border-radius);
+  font-size: var(--text-size);
+  color: var(--text-color);
+  border: var(--border);
+  background:var(--bg-color);
+  /* background: #f7f7f7; */
+  z-index: 0;
+  box-shadow: var(--box-shadow);
+}
+
+#firepad-3 .firepad-richtext .CodeMirror {
+  /* margin: 15px; */
+  padding: 20px;
+  font-family: var(--type);
+  border-radius: var(--border-radius);
+  font-size: var(--text-size);
+  color: var(--text-color);
+  border: var(--border);
+  background: var(--bg-color);
+  /* background: #f7f7f7; */
+  z-index: 0;
+  box-shadow: var(--box-shadow);
+}
+
+#firepad-4 .firepad-richtext .CodeMirror {
+  /* margin: 20px; */
+  padding: 20px;
+  font-family: var(--type);
+  border-radius: var(--border-radius);
+  font-size: var(--text-size);
+  color: var(--text-color);
+  border: var(--border);
+  background: var(--bg-color);
+  /* background: #f7f7f7; */
+  z-index: 0;
+  box-shadow: var(--box-shadow);
+}
+
+#firepad-5 .firepad-richtext .CodeMirror {
+  /* margin: 25px; */
+  padding: 20px;
+  font-family: var(--type);
+  border-radius: var(--border-radius);
+  font-size: var(--text-size);
+  color: var(--text-color);
+  border: var(--border);
+  background: var(--bg-color);
+  /* background: #f7f7f7; */
+  z-index: 0;
+  box-shadow: var(--box-shadow);
+}
+
+
+
+
+#firepad-0 .firepad-richtext .CodeMirror:hover{
+  background: var(--bg-hover);
+  font-size: var(--text-hover);
+  z-index: 2;
+}
+
+#firepad-1 .firepad-richtext .CodeMirror:hover{
+  background: var(--bg-hover);
+  font-size: var(--text-hover);
+  z-index: 2;
+}
+
+#firepad-2 .firepad-richtext .CodeMirror:hover{
+  background: var(--bg-hover);
+  font-size: var(--text-hover);
+  z-index: 2;
+}
+
+#firepad-3 .firepad-richtext .CodeMirror:hover{
+  background: var(--bg-hover);
+  font-size: var(--text-hover);
+  z-index: 2;
+}
+
+#firepad-4 .firepad-richtext .CodeMirror:hover{
+  background: var(--bg-hover);
+  font-size: var(--text-hover);
+  z-index: 2;
+}
+
+#firepad-5 .firepad-richtext .CodeMirror:hover{
+  background: var(--bg-hover);
+  font-size: var(--text-hover);
+  z-index: 2;
+}
+
+
+
+
+.firepad-spacer {
+  height: 10px;
+  width: 1px;
+}

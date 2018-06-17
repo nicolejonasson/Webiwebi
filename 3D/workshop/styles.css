@@ -1,0 +1,584 @@
+
+@font-face {
+font-family: 'CT';
+src:
+ url('https://rawgit.com/nicolejonasson/CollaborativeTypeface/gh-pages/Type/CT-Regular.ttf');
+}
+
+
+html {
+  height: 100%; }
+
+body {
+  /* background: radial-gradient(rgb(215, 255, 160), white, rgb(215, 255, 160)); */
+
+  margin: 0;
+  height: 100%;
+  position: relative;
+}
+
+#head-bar{
+  z-index: 10;
+  padding: 5px;
+  width: 3000px;;
+  letter-spacing: 10px;
+  font-family: "CT";
+  position: sticky;
+  margin: 0px;
+  left: 0;
+  top:0;
+  font-size: 15px;
+  color: black;
+  background: rgba(250, 250, 250, 0.5);
+  box-shadow:  5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.drag{
+    position: absolute;
+    font-family: "CT";
+    font-size: 40px;
+    z-index: 10;
+    text-align: center;
+    cursor: -webkit-grabbing;
+    -webkit-user-select: none;
+}
+
+#draggable-0{
+  left:5%;
+  top:80%;
+}
+
+#draggable-1{
+  left:5%;
+  top:75%;
+}
+
+#draggable-2{
+  left:5%;
+  top:70%;
+}
+
+#draggable-p{
+  left:2%;
+  top:100%;
+}
+#draggable-a{
+  left:2%;
+  top:110%;
+}
+#draggable-r{
+  left:2%;
+  top:120%;
+}
+#draggable-t{
+  left:2%;
+  top:130%;
+}
+
+#draggable-i{
+  left:2%;
+  top:140%;
+}
+
+#draggable-s{
+  left:2%;
+  top:150%;
+}
+
+#draggable-ii{
+  left:2%;
+  top:160%;
+}
+
+#draggable-pp{
+  left:2%;
+  top:167%;
+}
+
+#draggable-aa{
+  left:2%;
+  top:177%;
+}
+
+#draggable-tt{
+  left:2%;
+  top:187%;
+}
+#draggable-e{
+  left:2%;
+  top:195%;
+}
+
+
+
+
+.box{
+  -webkit-user-select: none;
+  cursor: cell;
+  width: 500px;
+  height: 50px;
+  line-height: 50px;
+  padding: 20px;
+  font-family: "CT";
+  border-radius: 15px;
+  color: black;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
+  letter-spacing: 20px;
+
+}
+
+
+#head{
+  margin:-10px;
+  display: grid;
+  position: relative;
+  top: 20%;
+  left: 0%;
+  /* transform: translate(-50%, -50%); */
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+
+
+#head-1{
+  z-index: 1;
+  font-size: 30px;
+  grid-column: 1;
+  grid-row:1;
+
+}
+
+#head-2{
+  z-index: 1;
+  font-size: 30px;
+  grid-column: 1;
+  grid-row:2;
+
+}
+
+#head-3{
+  z-index: 1;
+  font-size: 30px;
+  grid-column: 1;
+  grid-row:3;
+}
+
+.box:hover{
+  background: rgba(200,200,200,0.5);
+}
+
+
+#times{
+  z-index: 1;
+  font-family: "times New Roman";
+  font-size: 15px;
+  grid-column: 1;
+  grid-row: 4;
+  line-height: normal;
+  letter-spacing: normal;
+  visibility: hidden;
+}
+
+#head-4{
+  z-index: 0;
+  font-size: 20px;
+  grid-column: 2;
+  grid-row:3;
+  visibility: hidden;
+
+}
+
+#head-5{
+  z-index: 0;
+  font-size: 20px;
+  grid-column: 2;
+  grid-row:4;
+  visibility: hidden;
+
+}
+
+#head-6{
+  z-index: 1;
+  font-size: 15px;
+  /* line-height: normal; */
+  letter-spacing: 10px;
+  grid-column: 3;
+  grid-row:4;
+  visibility: hidden;
+
+}
+
+#head-7{
+  z-index: 1;
+  font-size: 15px;
+  /* line-height: normal; */
+  letter-spacing: 5px;
+  grid-column: 3;
+  grid-row:5;
+  visibility: hidden;
+}
+
+
+#head-8{
+  z-index: 1;
+  font-size: 15px;
+  /* line-height: normal; */
+  letter-spacing: 10px;
+  grid-column: 4;
+  grid-row:5;
+  visibility: hidden;
+
+}
+
+#head-9{
+  z-index: 1;
+  font-size: 15px;
+  /* line-height: normal; */
+  letter-spacing: 5px;
+  grid-column: 4;
+  grid-row:6;
+  visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+#participate{
+  width: 100%;
+  height: 100%;
+  margin-top: 20%;
+  display: grid;
+  grid-template-columns: repeat(10, 300px);
+  grid-template-rows: repeat(10, 1fr);
+  /* grid-column-gap: 200px; */
+  /* grid-template-rows: repeat(auto, 1fr); */
+}
+
+.small{
+
+  font-family: "CT";
+  font-size: 10px;
+  /* letter-spacing: 10px; */
+  color: black;
+
+}
+
+
+
+.greyBox{
+  width: 400px;;
+  height: auto;
+  background: rgba(220,220,220, 0.5);
+  padding: 15px;
+  border-radius: 15px;
+  border: 0.5px solid rgba(220,220,220, 0.5);
+  font-family: "CT";
+  font-size: 15px;
+  letter-spacing: 10px;
+  margin:5px;
+  text-align: left;
+}
+
+#side{
+  position: absolute;
+  left:2%;
+  top:100%;
+
+  width: 100px;
+  height: 1000px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
+
+  border-radius: 15px;
+
+}
+
+#small{
+  width: 350px;
+  margin-left: 20px;
+  margin-top: -20px;
+  height: 50px;
+  grid-column: 2;
+  grid-row: 2;
+  letter-spacing: 2px;
+}
+
+#h1{
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#h2{
+  grid-column: 2;
+  grid-row: 4;
+
+}
+
+#brød{
+  height:auto;
+  grid-column: 2;
+  grid-row: 3;
+  font-family: "times New Roman";
+  font-size: 15px;
+  line-height: normal;
+  letter-spacing: normal;
+
+}
+
+#comments > div{
+
+  max-width: 1000px;
+  height: 10px;
+}
+#comments{
+  grid-column: 3;
+  grid-row: 6;
+}
+
+#input-comment{
+  padding: 10px;
+  /* margin: 20px; */
+}
+
+#firepad-0{
+  grid-column: 5;
+  grid-row: 3;
+}
+
+#firepad-1{
+  grid-column: 5;
+  grid-row: 4;
+}
+#firepad-2{
+
+  grid-column: 6;
+  grid-row: 3;
+}
+#firepad-3{
+
+  grid-column: 6;
+  grid-row: 4;
+}
+
+#firepad-4{
+  grid-column: 7;
+  grid-row: 3;
+}
+
+#firepad-5{
+  grid-column: 8;
+  grid-row: 3;
+}
+
+#firepad-6{
+  grid-column: 5;
+  grid-row: 5;
+}
+
+.firepad-richtext .CodeMirror:hover{
+  background: rgba(220,220,220,0.5);
+  /* font-size: var(--text-hover); */
+  z-index: 2;
+  /* width: 350px; */
+  box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.big .firepad-richtext .CodeMirror {
+  margin-top: 120px;
+  border: 0.5px solid black;
+  height: 450px;
+  width: 450px;
+  font-size: 350px;
+  letter-spacing: 2px;
+  line-height: 2;
+  color: black;
+  text-align: center;
+}
+
+
+.big-box .firepad-richtext .CodeMirror {
+  margin-left: 200px;
+
+  /* border: 0.5px solid black; */
+  padding-top: 10px;
+  padding-left: 10px;
+  height: 1500px;
+  width: 700px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  line-height: 2;
+  color: black;
+  text-align: left;
+}
+
+
+
+
+.medi-box .firepad-richtext .CodeMirror {
+
+  /* border: 0.5px solid black; */
+  padding-top: 10px;
+  padding-left: 10px;
+  height: 1500px;
+  width: 400px;
+  font-size: 30px;
+  line-height: 1;
+  color: black;
+  text-align: left;
+}
+
+
+.small-box .firepad-richtext .CodeMirror {
+  /* border: 0.5px solid black; */
+  height: 150px;
+  width: 150px;
+  font-size: 100px;
+  line-height: 2;
+  padding: 0;
+  text-align: center;
+}
+
+
+
+
+#bottom{
+  position: relative;
+  width: 100%;
+  margin-top: 50%;
+  left:10%;
+  display: grid;
+  grid-template-columns: 500px 500px 500px;
+  grid-template-rows: 2;
+  grid-gap: 100px;
+}
+
+#com{
+  width: 40px;
+  font-size: 20px;
+  letter-spacing: 30px;
+  font-family: "ct";
+  writing-mode: vertical-rl;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#sources{
+  width: 40px;
+  font-size: 20px;
+  letter-spacing: 30px;
+  font-family: "ct";
+  writing-mode: vertical-rl;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#projects{
+  width: 40px;
+  font-size: 20px;
+  letter-spacing: 30px;
+  font-family: "ct";
+  writing-mode: vertical-lr;
+  grid-column: 3;
+  grid-row: 2;
+}
+
+#firepad-7{
+  margin-left: 50px;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#firepad-8{
+  margin-left: 50px;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#firepad-9{
+  margin-left: 50px;
+  grid-column: 3;
+  grid-row: 2;
+}
+
+
+.bottom-times .firepad-richtext .CodeMirror {
+  border: 0.5px solid black;
+  font-family: "times New Roman";
+  height: 800px;
+  width: 450px;
+  font-size: 30px;
+  line-height: 2;
+  color: black;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.firepad-richtext .CodeMirror {
+    font-family: "ct";
+    border-radius: 50px;
+    font-size: 80;
+    color: black;
+    background: white;
+    z-index: 0;
+    background: rgba(255, 255, 255, 0.5);
+    /* box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1); */
+}
+
+.firepad {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: left;
+  line-height: normal;
+}
+
+.firepad .CodeMirror {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: auto;
+}
+  /* --bg-color: rgb(249, 246, 239,0.5); */
+
+
+
+.firepad-spacer {
+  height: 10px;
+  width: 1px;
+}

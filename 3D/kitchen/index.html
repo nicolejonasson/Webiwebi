@@ -1,0 +1,137 @@
+
+<!-- See http://www.firepad.io/docs/ for detailed embedding docs. -->
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <!-- p5js -->
+  <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+  <!-- <style> body {padding: 0; margin: 0;} </style> -->
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <script src="../p5.min.js"></script>
+  <script src="../addons/p5.dom.min.js"></script>
+  <script src="../addons/p5.sound.min.js"></script>
+  <script src="sketch.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
+  <!-- CodeMirror -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.css" />
+
+  <!-- Firepad -->
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <!-- <link rel="stylesheet" href="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.css" /> -->
+  <script src="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.min.js"></script>
+
+
+</head>
+
+<body onload="init()">
+  <div id="canvasContainer"></div>
+
+  <div id= "head">
+    <div class ="box" id="head-1">wellcome</div>
+    <div class ="box" id="head-2">to the</div>
+      <div onclick = "show('head-4')" class ="box" id="head-3">workshop</div>
+
+        <div onclick = "show('head-5')" class ="box" id="head-4">we make things</div>
+        <div onclick = "show('head-6')" class ="box" id="head-5">together</div>
+
+          <div onclick = "show('head-7')" class ="box" id="head-6">participate in collabfont</div>
+          <div onclick = "show('head-8')"class ="box" id="head-7">share open source things</div>
+
+              <!-- <div onclick = "show('head-9')" class ="box" id="head-8">collaborative typeface</div>
+              <div class ="box" id="head-9">sharing space</div> -->
+  </div>
+
+
+
+  <div id="notice-wrapper">
+    <div id= "heading"> share events and happenings below. <br> remember to write time and date. <br> continue from the top</div>
+    <div id= "noticeboard"> notice board </div>
+    <div id= "o"> oooooooo </div>
+    <div id= "noticeboard-0"></div>
+  </div>
+
+  <div class = "firepad-wrapper">
+    <div id="firepad-0"></div>
+    <div id="firepad-1"></div>
+    <div id="firepad-2"></div>
+    <div id="firepad-3"></div>
+    <div id="firepad-4"></div>
+    <div id="firepad-5"></div>
+    <div id="firepad-6"></div>
+    <div id="firepad-7"></div>
+    <div id="firepad-8"></div>
+    <div id="firepad-9"></div>
+    <div id="firepad-10"></div>
+    <div id="firepad-11"></div>
+  </div>
+
+
+
+
+
+
+
+  <script>
+  function show(name){
+    var x = document.getElementById(name);
+
+      if (x.style.visibility == 'visible'){
+        x.style.visibility = 'hidden';
+      }
+      else{
+        x.style.visibility = 'visible';
+      }
+    }
+
+
+
+    function init() {
+      // // Initialize Firebase.
+      // // TODO: replace with your Firebase project configuration.
+      var config = {
+        apiKey: "AIzaSyDTLvn12YhyZ86R_zHw2AauWa8swoJwRZc",
+        authDomain: "collab-6fa95.firebaseapp.com",
+        databaseURL: "https://collab-6fa95.firebaseio.com",
+        projectId: "collab-6fa95",
+        storageBucket: "collab-6fa95.appspot.com",
+        messagingSenderId: "942968685131"
+
+      };
+      firebase.initializeApp(config);
+
+
+      for (var i = 0; i < 12; i++) {
+
+        var firepadRef = firebase.database().ref("box"+i);
+
+        var codeMirror = CodeMirror(document.getElementById("firepad-"+i), { lineWrapping: true });
+
+        var firepad = Firepad.fromCodeMirror(firepadRef, codeMirror, {
+          richTextShortcuts: true,
+          richTextToolbar: true,
+        });
+      }
+
+      for (var i = 0; i < 1; i++) {
+
+        var firepadRef = firebase.database().ref("noticeboard"+i);
+
+        var codeMirror = CodeMirror(document.getElementById("noticeboard-"+i), { lineWrapping: true });
+
+        var firepad = Firepad.fromCodeMirror(firepadRef, codeMirror, {
+          richTextShortcuts: true,
+          richTextToolbar: false,
+        });
+      }
+  }
+
+
+  </script>
+
+</body>
+</html>

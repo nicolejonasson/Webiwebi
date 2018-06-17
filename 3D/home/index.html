@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <!-- <style> body {padding: 0; margin: 0;} </style> -->
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="../p5.min.js"></script>
+    <script src="../addons/p5.dom.min.js"></script>
+    <script src="../addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+
+  </head>
+
+  <body>
+    <!-- <a href = "../library/index.html" > LIBRARY </a>
+    <a href = "../kitchen/index.html" > KITCHEN </a>
+    <a href = "../playground/index.html" > PLAYGROUND </a>
+    <a href = "../workshop/index.html" > WORKSHOP </a> -->
+
+    <!-- <div class="drag" id="draggable-0" >ø</div>
+    <div class = "drag" id="draggable-1" >o</div>
+    <div class = "drag" id="draggable-2" >æ</div>
+
+    <div class="drag" id="draggable-p" >w</div>
+    <div class = "drag" id="draggable-a" >æ</div>
+    <div class = "drag" id="draggable-r" >ø</div>
+    <div class ="drag" id="draggable-t" >o</div>
+    <div class = "drag" id="draggable-i" >o</div>
+    <div class = "drag" id="draggable-s" >æ</div>
+    <div class = "drag" id="draggable-ii" >æ</div>
+    <div class = "drag" id="draggable-pp" >ø</div>
+    <div class = "drag" id="draggable-aa" >o</div>
+    <div class = "drag" id="draggable-tt" >ø</div>
+    <div class = "drag" id="draggable-e" >o</div> -->
+
+
+
+    <div id= "wrapper">
+
+      <div onclick= "showHide('box-0')"  id = "intro" >
+        <p class = "big">wellcome to</p>
+        <!-- <p class = "big">collective kadk</p> -->
+      </div>
+
+      <div onclick= "showHide('box-0')"  id = "box" >
+        <p class = "big"> kadk common room</p>
+        <!-- <p class = "big">collective kadk</p> -->
+      </div>
+
+        <div onclick= "showRooms()"  id="box-0">
+          <p class = "small"> this is a home for all the people interested in the world of design and visual communication a platform for sharing and caring. enter the rooms to find out more aobut this place and how you can use it.</p>
+        </div>
+
+        <div onclick= "showRooms()" id = "box-1">
+            <p class = "small"> there are four rooms you can visit </p>
+        </div>
+
+        <div  onclick= "show('box-7')" class = "box" id = "box-2">
+            library
+        </div>
+
+        <div onclick= "show('box-6')" class = "box" id = "box-3">
+            workshop
+        </div>
+
+        <div onclick= "show('box-9')"  class = "box" id = "box-4">
+          kitchen
+        </div>
+        <div onclick= "show('box-8')" class = "box" id = "box-5">
+            playground
+        </div>
+
+        <div class="des" id = "box-6">
+          <a href = "../workshop/index.html" >
+            the room for text and words
+              <br> the place where you can search for new reads
+              <br> and share your old finds
+            </a>
+        </div>
+        <div class="des" id = "box-7">
+          <a href = "../library/index.html" >
+          the room for text and words
+            <br> the place where you can search for new reads
+            <br> and share your old finds
+          </a>
+        </div>
+        <div class="des" id = "box-8">
+          <a href = "../playground/index.html" >
+           the room for text and words
+            <br> the place where you can search for new reads
+            <br> and share your old finds
+          </a>
+        </div>
+        <div class="des" id = "box-9">
+          <a href = "../kitchen/index.html" >
+          the room for text and words
+            <br> the place where you can search for new reads
+            <br> and share your old finds
+          </a>
+        </div>
+      </div>
+
+
+    <script>
+     // function init(){
+     //   var x = document.getElementById("box-1");
+     //   x.style.visibility = 'hidden';
+     //
+     //   var elems = document.getElementsByClassName("box");
+     //   var i;
+     //   for (i = 0; i < elems.length; i++) {
+     //     var x = elems[i];
+     //     x.style.visibility = 'hidden';
+     //   }
+     //
+     //   var des = document.getElementsByClassName("Des");
+     //   var j;
+     //   for (j = 0; j < elems.length; j++) {
+     //     var x = des[j];
+     //     x.style.visibility = 'hidden';
+     //   }
+     //
+     //
+     //
+     // }
+
+
+    function show(name){
+      var x = document.getElementById(name);
+
+        if (x.style.visibility == 'visible'){
+          x.style.visibility = 'hidden';
+        }
+        else{
+          x.style.visibility = 'visible';
+        }
+      }
+
+      function showHide(name){
+        var x = document.getElementById(name);
+        var elems = document.getElementsByClassName("box");
+
+        for (var i = 0; i < elems.length; i++) {
+          var y = elems[i];
+          if (y.style.visibility == 'visible'){
+            y.style.visibility = 'hidden';
+          }
+        }
+
+        var el = document.getElementsByClassName("des");
+
+        for (var i = 0; i < el.length; i++) {
+          var y = el[i];
+          if (y.style.visibility == 'visible'){
+            y.style.visibility = 'hidden';
+          }
+        }
+
+
+          if (x.style.visibility == 'visible'){
+            x.style.visibility = 'hidden';
+          }
+          else{
+            x.style.visibility = 'visible';
+          }
+        }
+
+
+      function showRooms(){
+        var elems = document.getElementsByClassName("box");
+        var i;
+        for (i = 0; i < elems.length; i++) {
+          var x = elems[i];
+          if (x.style.visibility == 'visible'){
+            x.style.visibility = 'hidden';
+          }
+          else{
+            x.style.visibility = 'visible';
+          }
+        }
+    }
+    $(function() {
+        $( ".drag" ).draggable();
+    });
+
+
+    </script>
+
+
+
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="box" id = "box-2">
+  <ul class = "medi">
+    <li><a href="#"> library </a></li>
+    <li><a href="#"> the workshop </a></li>
+    <li><a href="#"> kitchen </a></li>
+    <li><a href="#"> playground </a></li>
+  </ul>
+</div> -->

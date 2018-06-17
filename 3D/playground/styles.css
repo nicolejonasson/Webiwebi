@@ -1,0 +1,435 @@
+@font-face {
+font-family: 'CT';
+src:
+ url('https://rawgit.com/nicolejonasson/CollaborativeTypeface/gh-pages/Type/CT-Regular.ttf');
+}
+
+
+html {
+  height: 100%; }
+
+body {
+  /* background: linear-gradient(rgb(255, 224, 232), white, rgb(255, 224, 232)); */
+  /* background: linear-gradient(rgb(215, 255, 160), white, rgb(215, 255, 160)); */
+  /* background: radial-gradient(rgb(215, 255, 160), white, rgb(215, 255, 160)); */
+  margin: 0;
+  width: windowWidth;
+  height: 100%;
+  position: relative;
+}
+
+#head-bar{
+  z-index: 10;
+  padding: 5px;
+  width: 1900px;
+  letter-spacing: 10px;
+  font-family: "CT";
+  position: sticky;
+  margin: 0px;
+  left: 0;
+  top:0;
+  font-size: 15px;
+  color: black;
+  background: rgba(250, 250, 250, 0.5);
+  box-shadow:  5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+#exit{
+  padding-top: 40px;
+  z-index: 1000;
+  border-radius: 25px;
+  background: rgba(250, 250, 250, 0.5);
+  box-shadow:  5px 5px 20px rgba(0, 0, 0, 0.1);
+  height: 3000px;
+  letter-spacing: 10px;
+  font-family: "CT";
+  position: fixed;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  font-size: 15px;
+  color: black;
+  writing-mode: vertical-rl;
+
+}
+
+
+.drag{
+    -webkit-text-stroke: 1px white;
+    position: absolute;
+    font-family: "CT";
+    font-size: 50px;
+    z-index: 10;
+    text-align: center;
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+    -webkit-user-select: none;
+}
+
+
+#draggable-0{
+  left:24%;
+  top:117%;
+}
+
+#draggable-1{
+  left:24%;
+  top:209%;
+}
+
+#draggable-2{
+  left:88%;
+  top:117%;
+}
+
+#draggable-3{
+  left:88%;
+  top:209%;
+}
+
+
+
+
+
+
+
+
+
+
+
+.box{
+
+  -webkit-user-select: none;
+  cursor: cell;
+  width: 500px;
+  height: 50px;
+  line-height: 50px;
+  padding: 20px;
+  font-family: "CT";
+  border-radius: 15px;
+  color: black;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
+  letter-spacing: 20px;
+
+}
+
+
+#head{
+  margin:-10px;
+  display: grid;
+  position: relative;
+  top: 20%;
+  left: 0%;
+  /* transform: translate(-50%, -50%); */
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+
+
+#head-1{
+  z-index: 1;
+  font-size: 30px;
+  grid-column: 1;
+  grid-row:1;
+
+}
+
+#head-2{
+  z-index: 1;
+  font-size: 30px;
+  grid-column: 1;
+  grid-row:2;
+
+}
+
+#head-3{
+  z-index: 1;
+  font-size: 30px;
+  grid-column: 1;
+  grid-row:3;
+}
+
+.box:hover{
+  background: rgba(200,200,200,0.5);
+}
+
+
+#head-4{
+  z-index: 0;
+  font-size: 20px;
+  grid-column: 2;
+  grid-row:3;
+  visibility: hidden;
+
+}
+
+#head-5{
+  z-index: 0;
+  font-size: 20px;
+  grid-column: 2;
+  grid-row:4;
+  visibility: hidden;
+
+}
+
+#head-6{
+  z-index: 1;
+  font-size: 15px;
+  /* line-height: normal; */
+  letter-spacing: 10px;
+  grid-column: 3;
+  grid-row:4;
+  visibility: hidden;
+
+}
+
+#head-7{
+  z-index: 1;
+  font-size: 15px;
+  /* line-height: normal; */
+  letter-spacing: 5px;
+  grid-column: 3;
+  grid-row:5;
+  visibility: hidden;
+}
+
+
+#head-8{
+  z-index: 1;
+  font-size: 15px;
+  /* line-height: normal; */
+  letter-spacing: 10px;
+  grid-column: 4;
+  grid-row:5;
+  visibility: hidden;
+
+}
+
+#head-9{
+  z-index: 1;
+  font-size: 15px;
+  /* line-height: normal; */
+  letter-spacing: 5px;
+  grid-column: 4;
+  grid-row:6;
+  visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#heading{
+  margin-left: 15%;
+  margin-top: 450px;
+  margin-bottom: -400px;
+  letter-spacing: 20px;
+  font-family: "CT";
+  font-size: 40px;
+  text-align: center;
+}
+
+#drawing-container{
+  width: 60%;
+  left: 25%;
+  top:30%;
+  position: relative;
+  /* left: 20%; */
+  margin-top: 200px;
+  display: grid;
+  grid-column:3 1fr;
+  grid-row: 5 1fr;
+}
+
+.ramme{
+  -webkit-user-select: none;
+  text-align: center;
+  position: relative;
+  margin: 5px;
+  font-family: "CT";
+  letter-spacing: 10px;
+  font-size: 10px;
+}
+
+
+#canvasContainer{
+  cursor: cell;
+  margin: 10px;
+  padding: 20px;
+  background: black;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#top-frame{
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#bottom-frame{
+  grid-column: 2;
+  grid-row: 3;
+}
+
+#left-frame{
+  writing-mode: vertical-rl;
+  grid-column: 1;
+  grid-row: 2;
+  /* margin-bottom: -675px; */
+  /* margin-bottom: -40%;
+  margin-left: 20%; */
+}
+
+#pop-rect{
+  z-index: 1000;
+  margin: -100px;
+  /* visibility: hidden; */
+}
+
+#top-frame:hover #pop-rect{
+  visibility: visible;
+}
+
+
+
+
+
+
+#right-frame{
+  writing-mode: vertical-rl;
+  grid-column: 3;
+  grid-row: 2;
+  /* margin-bottom: -675px; */
+  /* margin-bottom: -40%;
+  margin-left: 78%; */
+}
+
+
+#list{
+  grid-column: 2;
+  grid-row: 5;
+
+}
+
+#mid{
+  margin: 50px;
+  grid-column: 2;
+  grid-row: 4;
+  text-align: center;
+
+}
+#button{
+  margin-top: -50px;
+  margin: 50px;
+  z-index: 1;
+
+}
+
+.pop-up{
+  padding: 20px;
+  font-size: 15px;
+  position: absolute;
+  background: rgb(220,220,220, 0.5);
+  box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  visibility: visible;
+  visibility: hidden;
+}
+
+#pop-1{
+  grid-column: 2;
+  grid-row: 4;
+  margin-left: 10%
+
+}
+
+#pop-2{
+  grid-column: 2;
+  grid-row: 4;
+  margin-left: 70%
+}
+
+
+#mid:hover .pop-up{
+  visibility: visible;
+}
+
+
+#drawingList{
+  margin-left: 150px;
+  border-radius: 20px;
+  padding: 20px;
+  width: 630px;
+  background: rgba(250, 250, 250, 0.5);
+  box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
+  -webkit-user-select: none;
+  position:relative;
+  list-style: none;
+  text-decoration: none;
+  letter-spacing: 20px;
+  font-family: "CT";
+  font-size: 15px;
+  line-height: 1.5;
+  color: black;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+
+#text{
+  margin-bottom: 50px;
+  font-family: "CT";
+  letter-spacing: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+a {
+    color: black;
+}
+
+button{
+  margin: 10px;
+  cursor:pointer;
+  padding: 5px;
+  width: auto;
+  height: auto;
+  font-family: "CT";
+  font-size: 15px;
+  /* box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1); */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

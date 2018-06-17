@@ -1,0 +1,151 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <script src="../p5.min.js"></script>
+    <script src="../addons/p5.dom.min.js"></script>
+    <script src="../addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  </head>
+
+
+  <body>
+    <div id= "head-bar">
+      <div>the playground the playground the playground the playground the playground the playground</div>
+    </div>
+
+    <a href = "../home/index.html" >
+      <div id= "exit"> exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit </div>
+    </a>
+
+    <div id="all-drags">
+      <div class = "drag" id="draggable-0" >o</div>
+      <div class = "drag" id="draggable-1" >o</div>
+      <div class = "drag" id="draggable-2" >o</div>
+      <div class = "drag" id="draggable-3" >o</div>
+
+      <div class = "drag" id="draggable-0" >o</div>
+      <div class = "drag" id="draggable-1" >o</div>
+      <div class = "drag" id="draggable-2" >o</div>
+      <div class = "drag" id="draggable-3" >o</div>
+
+      <div class = "drag" id="draggable-0" >o</div>
+      <div class = "drag" id="draggable-1" >o</div>
+      <div class = "drag" id="draggable-2" >o</div>
+      <div class = "drag" id="draggable-3" >o</div>
+    </div>
+
+    <div id= "head">
+      <div class ="box" id="head-1">wellcome</div>
+      <div class ="box" id="head-2">to the</div>
+      <div onclick = "show('head-4')" class ="box" id="head-3">playground</div>
+
+        <div onclick = "show('head-5')" class ="box" id="head-4">you can draw</div>
+        <div onclick = "show('head-6')" class ="box" id="head-5"> and play</div>
+
+          <div onclick = "show('head-7')" class ="box" id="head-6">continue drawing</div>
+          <div onclick = "show('head-8')"class ="box" id="head-7">share open source things</div>
+
+            <!-- <div onclick = "show('head-9')" class ="box" id="head-8">collaborative typeface</div>
+            <div class ="box" id="head-9">sharing space</div> -->
+    </div>
+
+
+    <div id="heading"> drawing canvas</div>
+
+    <div id="drawing-container">
+    <div id="rect"></div>
+      <div id="left-frame">
+        <div class = "ramme">øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø</div>
+        <div class = "ramme">æææææææææææææææææææææææææææææææææææ</div>
+
+      </div>
+
+      <div id="right-frame">
+        <div class = "ramme">æææææææææææææææææææææææææææææææææææ</div>
+        <div class = "ramme">øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø</div>
+      </div>
+
+
+      <div id="top-frame">
+        <div class = "ramme">ææææææææææææææææææææææææææææææææææææææææææææ</div>
+        <div class = "ramme">øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø</div>
+        <div class="pop-up" id="pop-rect">You can drag the corners <br> and use them on the canvas</div>
+
+      </div>
+
+
+
+      <div id= "canvasContainer"></div>
+
+
+      <div id="bottom-frame">
+        <div class = "ramme">øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø</div>
+        <div class = "ramme">ææææææææææææææææææææææææææææææææææææææææææææ</div>
+      </div>
+
+      <div id="mid">
+        <div class="pop-up" id="pop-1">Add you drawing to <br> the end of the list</div>
+        <div class="pop-up" id="pop-2"> create a new drawing </div>
+        <button class = "button" id ="save">save</button>
+        <button class = "button" id ="clear">new</button>
+      </div>
+
+
+      <div id="list">
+        <div id= "text"> click on list to see other drawings.<br></div>
+        <!-- continue a drawing or press clear to start new one.<br>
+        save adds you drawing at the end of list.</div> -->
+        <ol id= "drawingList"> </ol>
+      </div>
+
+
+
+
+    </div>
+
+
+    <script>
+
+      // function hoverIn(){
+      //   var x = document.getElementById("times");
+      //
+      //   if (x.style.visibility == 'visible'){
+      //     x.style.visibility = 'hidden';
+      //   }
+      //   else{
+      //     x.style.visibility = 'visible';
+      //
+      //   }
+      // }
+
+      function show(name){
+        var x = document.getElementById(name);
+
+          if (x.style.visibility == 'visible'){
+            x.style.visibility = 'hidden';
+          }
+          else{
+            x.style.visibility = 'visible';
+          }
+        }
+
+
+        $(function() {
+            $( ".drag" ).draggable();
+        });
+
+    </script>
+
+  </body>
+</html>

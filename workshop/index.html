@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <!-- <style> body {padding: 0; margin: 0;} </style> -->
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="../p5.min.js"></script>
+    <script src="../addons/p5.dom.min.js"></script>
+    <script src="../addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+
+    <!-- CodeMirror -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.css" />
+
+    <!-- Firepad -->
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.min.js"></script>
+
+  </head>
+
+  <body onload="init()">
+    <!-- <div onclick= "showRooms()" id ="test">test</div> -->
+    <div id= "head-bar">
+      <div>the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop </div>
+      <!-- <div>the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop </div>
+      <div>the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop </div> -->
+    </div>
+
+    <div class="drag" id="draggable-0" >ø</div>
+    <div class = "drag" id="draggable-1" >o</div>
+    <div class = "drag" id="draggable-2" >æ</div>
+
+
+    <div class="drag" id="draggable-p" >p</div>
+    <div class = "drag" id="draggable-a" >a</div>
+    <div class = "drag" id="draggable-r" >r</div>
+    <div class ="drag" id="draggable-t" >t</div>
+    <div class = "drag" id="draggable-i" >i</div>
+    <div class = "drag" id="draggable-s" >s</div>
+    <div class = "drag" id="draggable-ii" >i</div>
+    <div class = "drag" id="draggable-pp" >p</div>
+    <div class = "drag" id="draggable-aa" >a</div>
+    <div class = "drag" id="draggable-tt" >t</div>
+    <div class = "drag" id="draggable-e" >e</div>
+
+
+    <div id= "head">
+      <div class ="box" id="head-1">wellcome</div>
+      <div class ="box" id="head-2">to the</div>
+      <div onclick = "show('head-4')" class ="box" id="head-3">workshop</div>
+      <div class ="box" id="times">In the workshop you can explore and learn about the possibilities <br>
+        of making this a collaborative place. This place is dedicated to <br>
+         everything  type and open source related</div>
+
+        <div onclick = "show('head-5')" class ="box" id="head-4">we make things</div>
+        <div onclick = "show('head-6')" class ="box" id="head-5">together</div>
+
+          <div onclick = "show('head-7')" class ="box" id="head-6">participate in collabfont</div>
+          <div onclick = "show('head-8')"class ="box" id="head-7">share open source things</div>
+
+            <div onclick = "show('head-9')" class ="box" id="head-8">collaborative typeface</div>
+            <div class ="box" id="head-9">sharing space</div>
+    </div>
+
+    <div id= "side"></div>
+
+    <div id = "participate">
+      <div class = "small" id= "small" > be a part of the collaborative typeface </div>
+      <div class = "greyBox" id= "h1" >make whatever</div>
+      <div class = "greyBox" id= "brød" >Contribute to the webpage <br>
+        The typeface of this webpage, is made in <br>
+        collaboration with students from kadk. <br>
+        The font file is now on github, and available <br>
+        for all to download and modify. <br>
+        All you need is a type editor, then you can make <br>
+        whatever changes you want.</div>
+      <div class = "greyBox" id= "h2" >changes you want  </div>
+
+      <!-- <div id = "comments">
+        <div id= "input-comment">Comment <input type = "text"></div>
+        <div contenteditable="true" class = "greyBox"></div>
+        <div class = "greyBox"> </div>
+        <div class = "greyBox"> </div>
+        <div class = "greyBox"> </div>
+        <div class = "greyBox"> </div>
+        <div class = "greyBox"> </div>
+        <div class = "greyBox"> </div>
+        <div class = "greyBox"> </div>
+      </div> -->
+
+
+          <div  class =" small-box" id="firepad-0"> </div>
+          <div  class =" small-box" id="firepad-1"></div>
+          <div  class =" small-box" id="firepad-2"></div>
+          <div  class =" small-box" id="firepad-3"></div>
+
+          <div  class ="medi-box" id="firepad-4"></div>
+          <div  class ="big-box" id="firepad-5"></div>
+
+          <div  class ="big" id="firepad-6"></div>
+        </div>
+
+
+        <div id = "bottom">
+          <div  class ="bottom-times" id="firepad-7"></div>
+          <div id= "projects">projects</div>
+
+          <div  class ="bottom-times" id="firepad-8"></div>
+
+          <div id= "sources">sources</div>
+          <div  class ="bottom-times" id="firepad-9"></div>
+          <div id= "com">comments</div>
+        </div>
+
+
+
+
+
+      <script>
+
+
+      function init() {
+        // // Initialize Firebase.
+        // // TODO: replace with your Firebase project configuration.
+        var config = {
+          apiKey: "AIzaSyDTLvn12YhyZ86R_zHw2AauWa8swoJwRZc",
+          authDomain: "collab-6fa95.firebaseapp.com",
+          databaseURL: "https://collab-6fa95.firebaseio.com",
+          projectId: "collab-6fa95",
+          storageBucket: "collab-6fa95.appspot.com",
+          messagingSenderId: "942968685131"
+
+        };
+        firebase.initializeApp(config);
+
+
+        for (var i = 0; i < 10; i++) {
+
+          var firepadRef = firebase.database().ref("letter"+i);
+
+          var codeMirror = CodeMirror(document.getElementById("firepad-"+i), { lineWrapping: true });
+
+          var firepad = Firepad.fromCodeMirror(firepadRef, codeMirror, {
+            richTextShortcuts: true,
+            richTextToolbar: false,
+          });
+        }
+
+
+      }
+
+
+
+      function hoverIn(){
+        var x = document.getElementById("times");
+
+        if (x.style.visibility == 'visible'){
+          x.style.visibility = 'hidden';
+        }
+        else{
+          x.style.visibility = 'visible';
+
+        }
+      }
+
+      function show(name){
+        var x = document.getElementById(name);
+
+          if (x.style.visibility == 'visible'){
+            x.style.visibility = 'hidden';
+          }
+          else{
+            x.style.visibility = 'visible';
+          }
+        }
+
+
+      $(function() {
+          $( ".drag" ).draggable();
+      });
+
+
+      </script>
+
+      </body>
+
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="box" id = "box-2">
+  <ul class = "medi">
+    <li><a href="#"> library </a></li>
+    <li><a href="#"> the workshop </a></li>
+    <li><a href="#"> kitchen </a></li>
+    <li><a href="#"> playground </a></li>
+  </ul>
+</div> -->

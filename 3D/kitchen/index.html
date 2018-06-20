@@ -11,7 +11,7 @@
   <script src="../p5.min.js"></script>
   <script src="../addons/p5.dom.min.js"></script>
   <script src="../addons/p5.sound.min.js"></script>
-  <script src="sketch.js"></script>
+  <!-- <script src="sketch.js"></script> -->
 
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
@@ -31,16 +31,29 @@
 <body onload="init()">
   <div id="canvasContainer"></div>
 
+  <div id= "head-bar">
+  <div>the kitchen the kitchen the kitchen the kitchen the kitchen the kitchen the kitchen</div>
+</div>
+
+    <a href = "../home/index.html" >
+      <div id= "exit"> go back to common room go back to common room go back to common room go back to common room</div>
+    </a>
+
   <div id= "head">
     <div class ="box" id="head-1">wellcome</div>
     <div class ="box" id="head-2">to the</div>
-      <div onclick = "show('head-4')" class ="box" id="head-3">workshop</div>
+      <div onclick = "show('head-4')" class ="box" id="head-3">kitchen</div>
 
-        <div onclick = "show('head-5')" class ="box" id="head-4">we make things</div>
-        <div onclick = "show('head-6')" class ="box" id="head-5">together</div>
+        <div onclick = "show('head-5')" class ="box" id="head-4">the place for </div>
+        <div onclick = "show('head-6')" class ="box" id="head-5"> making together  </div>
+        <div onclick = "show('head-7')" class ="box" id="head-6"> and sharing together </div>
 
-          <div onclick = "show('head-7')" class ="box" id="head-6">participate in collabfont</div>
-          <div onclick = "show('head-8')"class ="box" id="head-7">share open source things</div>
+
+          <div onclick = "show('head-8')" class ="box" id="head-7">inform your friends</div>
+          <div onclick = "show('head-9')"class ="box" id="head-8">about things happening</div>
+
+          <div onclick = "show('head-10')"class ="box" id="head-9">use the corner to talk</div>
+          <div onclick = "show('head-10')"class ="box" id="head-10">about anything and everything</div>
 
               <!-- <div onclick = "show('head-9')" class ="box" id="head-8">collaborative typeface</div>
               <div class ="box" id="head-9">sharing space</div> -->
@@ -49,12 +62,14 @@
 
 
   <div id="notice-wrapper">
-    <div id= "heading"> share events and happenings below. <br> remember to write time and date. <br> continue from the top</div>
+    <div id= "heading"> share events and happenings below <br> remember to write time and date <br> continue from the top</div>
     <div id= "noticeboard"> notice board </div>
     <div id= "o"> oooooooo </div>
     <div id= "noticeboard-0"></div>
   </div>
 
+  <div id= "corner"> corners </div>
+  <div id= "ex-corner"> the corners is for all the small talk and gossip <br> say what you want, if you want. </div>
   <div class = "firepad-wrapper">
     <div id="firepad-0"></div>
     <div id="firepad-1"></div>

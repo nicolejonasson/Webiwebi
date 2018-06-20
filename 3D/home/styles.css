@@ -99,9 +99,9 @@ body {
 
 #wrapper{
   width: 100%;
-  height: 60%;
-  margin-top: 10%;
-  position: absolute;
+  height: 80%;
+
+  position: relative;
   display: grid;
   grid-template-columns: repeat(5,1fr);
   grid-template-rows:repeat(4,1fr);
@@ -129,16 +129,16 @@ body {
 
 #intro{
   height: 80px;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 25%;
+  margin-right: 25%;
   grid-column: 2/span 3;
   grid-row: 1;
 }
 
 #box{
   height: 80px;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 25%;
+  margin-right: 25%;
   margin-bottom: 0px;
   padding-top: 0px;
   grid-column: 2/span 3;
@@ -234,11 +234,13 @@ p.big{
 
 p.small{
   font-family: "times new roman";
-  letter-spacing: 5px;
+  /* font-family: "ct"; */
+  /* letter-spacing: 5px; */
   margin: 0px;
-  font-size: 25px;
+  font-size: 18px;
   text-align: center;
   line-height: 1.5;
+   text-transform: lowercase;
 }
 
 
@@ -262,6 +264,11 @@ p.small{
 }
 
 a{
+  margin-top: 10px;
+  float: left;
+  padding: 5px;
+  border: 0.5px solid black;
+  font-family: "ct";
   text-decoration: none;
   color:black;
 }

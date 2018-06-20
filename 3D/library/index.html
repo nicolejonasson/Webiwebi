@@ -12,7 +12,13 @@
   <script src="../p5.min.js"></script>
   <script src="../addons/p5.dom.min.js"></script>
   <script src="../addons/p5.sound.min.js"></script>
-  <script src="sketch.js"></script>
+  <!-- <script src="sketch.js"></script> -->
+
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+
 
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
@@ -34,7 +40,7 @@
 </div>
 
     <a href = "../home/index.html" >
-      <div id= "exit"> exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit exit </div>
+      <div id= "exit"> go back to common room go back to common room go back to common room go back to common room</div>
     </a>
 
     <div id = "canvasContainer"> </div>
@@ -52,14 +58,17 @@
     </div> -->
 
     <div class = "head">
-        <div class = "intro-box" id = "head-0">wellcome</div>
-        <div onclick = "showBox('head-2')" class = "intro-box" id = "head-1">you are at</div>
+        <div onclick = "showBox('head-3')" class = "intro-box" id = "head-0">wellcome</div>
+        <div onclick = "showBox('head-3')" class = "intro-box" id = "head-1">you are at</div>
         <div onclick = "showBox('head-3')" class = "intro-box" id = "head-2" >the library </div>
         <div onclick = "showBox('head-4')" class = "intro-box" id = "head-3">a place for reading </div>
         <div onclick = "showBox('head-5')" class = "intro-box" id = "head-4">and writing</div>
-        <div onclick = "showBox('head-6')" class = "intro-box" id = "head-5"> find interesting</div>
-        <div onclick = "showBox('head-7')" class = "intro-box" id = "head-6">share links </div>
-    </div>
+        <div onclick = "showBox('head-6')" class = "intro-box" id = "head-5"> search for new text</div>
+        <div onclick = "showBox('head-7')" class = "intro-box" id = "head-6"> or share your own finds </div>
+        <div onclick = "showBox('head-8')" class = "intro-box" id = "head-7"> ask questions  </div>
+        <div onclick = "showBox('head-8')" class = "intro-box" id = "head-8"> and start conversations </div>
+
+  </div>
 
 
 
@@ -75,160 +84,175 @@
 
         <div class = "greyBox" id = "question"> why be a designer? </div>
     </div>-->
+    <div id="bookmarks-wrapper">
+      <div id = "bookmark" > bookmarks </div>
 
-    <div id = "bookmark" > bookmarks </div>
-    <div id = "explanation"> write a tag for a bookmark</div>
-  </div>
+      <div class= "ex-box">Start a tread in one of the bookmarks or continue on an existing one.
+        Give a headline for the bookmark in the boxes underneath. </div>
+      <div class= "ex-box">In the bookmark you can paste in links, references, or whatever you find relevant.
+        Write a small description of your topic if you see fit. </div>
+
+    </div>
+    <!-- <div class="drag" id = "explanation"> find the bookmark in the list or write your own headline for a bookmark</div> -->
+
+
+      <div class="drag" id="draggable-0" >ø</div>
 
 
 
-  <button onclick ="updateName()"> submit </button>
+
+  <!-- <button onclick ="updateName()"> submit </button> -->
 
   <div class = "links">
-      <li onclick ="firepadStyles('firepad-0')">
-        <a href="#firepad-0">a</a>
+      <div id = "heading"> headline </div>
+      <li onclick ="firepadStyles('firepad-0')">o
         <input onblur="submitText('input-0')" type = "text" id = "input-0">
       </li>
-      <li onclick ="firepadStyles('firepad-1')">
-        <a href="#firepad-1">b</a>
+      <li onclick ="firepadStyles('firepad-1')">o
         <input onblur="submitText('input-1')" type = "text" id = "input-1">
       </li>
-      <li onclick ="firepadStyles('firepad-2')">
-        <a href="#firepad-2">c</a>
+      <li onclick ="firepadStyles('firepad-2')">o
         <input onblur="submitText('input-2')" type = "text" id = "input-2">
       </li>
-      <li onclick ="firepadStyles('firepad-3')">
-        <a href="#firepad-3">d</a>
+      <li onclick ="firepadStyles('firepad-3')">o
         <input  onblur="submitText('input-3')" type = "text" id = "input-3">
       </li>
-      <li onclick ="firepadStyles('firepad-4')">
-        <a href="#firepad-4">e</a>
+      <li onclick ="firepadStyles('firepad-4')">o
         <input  onblur="submitText('input-4')" type = "text" id = "input-4">
       </li>
-      <li onclick ="firepadStyles('firepad-5')">
-        <a href="#firepad-5">f</a>
+      <li onclick ="firepadStyles('firepad-5')">o
         <input  onblur="submitText('input-5')" type = "text" id = "input-5">
       </li>
-      <li onclick ="firepadStyles('firepad-6')">
-        <a href="#firepad-6">g</a>
+      <li onclick ="firepadStyles('firepad-6')">o
         <input  onblur="submitText('input-6')" type = "text" id = "input-6">
       </li>
-      <li onclick ="firepadStyles('firepad-7')">
-        <a href="#firepad-7">h</a>
+      <li onclick ="firepadStyles('firepad-7')">o
         <input onblur="submitText('input-7')" type = "text" id = "input-7">
       </li>
-      <li onclick ="firepadStyles('firepad-8')">
-        <a href="#firepad-8">i</a>
+      <li onclick ="firepadStyles('firepad-8')">o
           <input onblur="submitText('input-8')" type = "text" id = "input-8">
       </li>
-      <li onclick ="firepadStyles('firepad-9')">
-        <a href="#firepad-9">j</a>
+      <li onclick ="firepadStyles('firepad-9')">o
         <input onblur="submitText('input-9')" type = "text" id = "input-9">
       </li>
-      <li onclick ="firepadStyles('firepad-10')">
-        <a href="#firepad-10">k</a>
+      <li onclick ="firepadStyles('firepad-10')">o
         <input onblur="submitText('input-10')" type = "text" id = "input-10">
       </li>
-      <li onclick ="firepadStyles('firepad-11')">
-        <a href="#firepad-11">l</a>
+      <li onclick ="firepadStyles('firepad-11')">o
         <input onblur="submitText('input-11')" type = "text" id = "input-11">
       </li>
-      <li onclick ="firepadStyles('firepad-12')">
-        <a href="#firepad-12">m</a>
+      <li onclick ="firepadStyles('firepad-12')">o
         <input onblur="submitText('input-12')" type = "text" id = "input-12">
       </li>
       <li onclick ="firepadStyles('firepad-13')">
-        <a href="#firepad-12">n</a>
         <input onblur="submitText('input-13')" type = "text" id = "input-13">
       </li>
-      <li onclick ="firepadStyles('firepad-14')">
-        <a href="#firepad-13">o</a>
+      <li onclick ="firepadStyles('firepad-14')">o
         <input onblur="submitText('input-14')" type = "text" id = "input-14">
       </li>
-      <li onclick ="firepadStyles('firepad-15')">
-        <a href="#firepad-14">p</a>
+      <li onclick ="firepadStyles('firepad-15')">o
         <input onblur="submitText('input-15')" type = "text" id = "input-15">
       </li>
-      <li onclick ="firepadStyles('firepad-16')">
-        <a href="#firepad-15">q</a>
+      <li onclick ="firepadStyles('firepad-16')">o
+
         <input onblur="submitText('input-16')" type = "text" id = "input-16">
       </li>
-      <li onclick ="firepadStyles('firepad-17')">
-        <a href="#firepad-16">r</a>
+      <li onclick ="firepadStyles('firepad-17')">o
+
         <input onblur="submitText('input-17')" type = "text" id = "input-17">
       </li>
-      <li onclick ="firepadStyles('firepad-18')">
-        <a href="#firepad-17">s</a>
+      <li onclick ="firepadStyles('firepad-18')">o
+
         <input onblur="submitText('input-18')" type = "text" id = "input-18">
       </li>
-      <li onclick ="firepadStyles('firepad-19')">
-        <a href="#firepad-18">t</a>
+      <li onclick ="firepadStyles('firepad-19')">o
+
         <input onblur="submitText('input-19')" type = "text" id = "input-19">
       </li>
-      <li onclick ="firepadStyles('firepad-20')">
-        <a href="#firepad-19">u</a>
+      <li onclick ="firepadStyles('firepad-20')">o
+
         <input onblur="submitText('input-20')" type = "text" id = "input-20">
       </li>
-      <li onclick ="firepadStyles('firepad-21')">
-        <a href="#firepad-20">v</a>
+      <li onclick ="firepadStyles('firepad-21')">o
+
         <input onblur="submitText('input-21')" type = "text" id = "input-21">
       </li>
-      <li onclick ="firepadStyles('firepad-22')">
-        <a href="#firepad-21">w</a>
+      <li onclick ="firepadStyles('firepad-22')">o
+
         <input onblur="submitText('input-22')" type = "text" id = "input-22">
       </li>
 
   </div>
 
   <div class = firepad-wrapper>
-    <div onclick ="firepadStyles('firepad-0')" class =" box" id="firepad-0"> a </div>
-    <div onclick ="firepadStyles('firepad-1')" class =" box" id="firepad-1"> b </div>
-    <div onclick ="firepadStyles('firepad-2')" class =" box" id="firepad-2"> c </div>
-    <div onclick ="firepadStyles('firepad-3')" class =" box" id="firepad-3"> d </div>
-    <div onclick ="firepadStyles('firepad-4')" class =" box" id="firepad-4"> e </div>
-    <div onclick ="firepadStyles('firepad-5')" class =" box" id="firepad-5"> f </div>
-    <div onclick ="firepadStyles('firepad-6')" class =" box" id="firepad-6"> g </div>
-    <div onclick ="firepadStyles('firepad-7')" class =" box" id="firepad-7"> h </div>
-    <div onclick ="firepadStyles('firepad-8')" class =" box" id="firepad-8"> i </div>
-    <div onclick ="firepadStyles('firepad-9')" class =" box" id="firepad-9"> j </div>
-    <div onclick ="firepadStyles('firepad-10')" class =" box" id="firepad-10"> k </div>
-    <div onclick ="firepadStyles('firepad-11')" class =" box" id="firepad-11"> l </div>
-    <div onclick ="firepadStyles('firepad-12')" class =" box" id="firepad-12"> m </div>
-    <div onclick ="firepadStyles('firepad-13')" class =" box" id="firepad-13"> n </div>
-    <div onclick ="firepadStyles('firepad-14')" class =" box" id="firepad-14"> o </div>
-    <div onclick ="firepadStyles('firepad-15')" class =" box" id="firepad-15"> p </div>
-    <div onclick ="firepadStyles('firepad-16')" class =" box" id="firepad-16"> q </div>
-    <div onclick ="firepadStyles('firepad-17')" class =" box" id="firepad-17"> r </div>
-    <div onclick ="firepadStyles('firepad-18')" class =" box" id="firepad-18"> s </div>
-    <div onclick ="firepadStyles('firepad-19')" class =" box" id="firepad-19"> t </div>
-    <div onclick ="firepadStyles('firepad-20')" class =" box" id="firepad-20"> u </div>
-    <div onclick ="firepadStyles('firepad-21')" class =" box" id="firepad-21"> v </div>
-    <div onclick ="firepadStyles('firepad-22')" class =" box" id="firepad-22"> w </div>
+    <div onclick ="firepadStyles('firepad-0')" class =" box" id="firepad-0">  </div>
+    <div onclick ="firepadStyles('firepad-1')" class =" box" id="firepad-1">  </div>
+    <div onclick ="firepadStyles('firepad-2')" class =" box" id="firepad-2">  </div>
+    <div onclick ="firepadStyles('firepad-3')" class =" box" id="firepad-3">  </div>
+    <div onclick ="firepadStyles('firepad-4')" class =" box" id="firepad-4">  </div>
+    <div onclick ="firepadStyles('firepad-5')" class =" box" id="firepad-5">  </div>
+    <div onclick ="firepadStyles('firepad-6')" class =" box" id="firepad-6">  </div>
+    <div onclick ="firepadStyles('firepad-7')" class =" box" id="firepad-7">  </div>
+    <div onclick ="firepadStyles('firepad-8')" class =" box" id="firepad-8">  </div>
+    <div onclick ="firepadStyles('firepad-9')" class =" box" id="firepad-9">  </div>
+    <div onclick ="firepadStyles('firepad-10')" class =" box" id="firepad-10">  </div>
+    <div onclick ="firepadStyles('firepad-11')" class =" box" id="firepad-11">  </div>
+    <div onclick ="firepadStyles('firepad-12')" class =" box" id="firepad-12">  </div>
+    <div onclick ="firepadStyles('firepad-13')" class =" box" id="firepad-13">  </div>
+    <div onclick ="firepadStyles('firepad-14')" class =" box" id="firepad-14">  </div>
+    <div onclick ="firepadStyles('firepad-15')" class =" box" id="firepad-15"> </div>
+    <div onclick ="firepadStyles('firepad-16')" class =" box" id="firepad-16">  </div>
+    <div onclick ="firepadStyles('firepad-17')" class =" box" id="firepad-17">  </div>
+    <div onclick ="firepadStyles('firepad-18')" class =" box" id="firepad-18">  </div>
+    <div onclick ="firepadStyles('firepad-19')" class =" box" id="firepad-19">  </div>
+    <div onclick ="firepadStyles('firepad-20')" class =" box" id="firepad-20">  </div>
+    <div onclick ="firepadStyles('firepad-21')" class =" box" id="firepad-21">  </div>
+    <div onclick ="firepadStyles('firepad-22')" class =" box" id="firepad-22">  </div>
 
     <!-- <div class =" box"  id="image"> <img src="1.jpg"> </div> -->
   </div>
 
+  <div id= "bookClub" > book club </div>
+  <div class= "ex-box" id="ex-bookClub">Start discussions or share thoughts on nothing. <br> Ask questions or answer them. </div>
+
   <div class= "container">
-    <div class= "bottom" id= "toolbar-0" > book club </div>
     <div class= "bottom" id= "toolbar-1"> </div>
     <div class= "bottom" id= "toolbar-2"> </div>
     <div class= "bottom" id= "toolbar-3"> </div>
     <div class= "bottom" id= "toolbar-4"> </div>
-    <div class= "greyBox" id= "toolbar-5">why are you a designer?</div>
-    <div class= "greyBox" id= "toolbar-6">do you like to read?</div>
-    <div class= "greyBox" id= "toolbar-7">why do you like to read?</div>
-    <div class= "greyBox" id= "toolbar-8"></div>
-    <div class= "greyBox" id= "toolbar-9"></div>
-    <div class= "greyBox" id= "toolbar-10"></div>
-    <div class= "greyBox" id= "toolbar-11"></div>
-    <div class= "greyBox" id= "question">ask a question:
-      <input type = "text" id="input-qestion"></div>
+
+    <div class= "greyBox" id= "question">ask a question
+      <input type = "text" id="input-qestion">
+
+      <!-- <input onblur="submitText('input-qestion')" type = "text" id="input-qestion"> -->
+      <button onclick ="updateName('input-qestion')" id ="question-button">ask</button>
+    </div>
+
   </div>
+
+  <div id= "question-container">
+    <div class= "drag" id= "question-0"></div>
+    <div class= "drag" id= "question-1"></div>
+    <div class= "drag" id= "question-2"></div>
+    <div class= "drag" id= "question-3"></div>
+    <div class= "drag" id= "question-4"></div>
+    <div class= "drag" id= "question-5"></div>
+    <div class= "drag" id= "question-6"></div>
+    <div class= "drag" id= "question-7"></div>
+    <div class= "drag" id= "question-8"></div>
+    <div class= "drag" id= "question-9"></div>
+  </div>
+
+
+
+
+
 
 
   <script>
 
     function init() {
+
       // // Initialize Firebase.
       // // TODO: replace with your Firebase project configuration.
       var config = {
@@ -299,37 +323,91 @@
       }
 
 
+
+        var ref = firebase.database().ref("input-qestion");
+        ref.limitToLast(10).once("value", gotData, errData);
+
+
+          function gotData(data){
+
+                  var text = data.val();
+                  var keys = Object.keys(text);
+
+
+                  for(var i= 0; i < keys.length; i++){
+                    var k = keys[i];
+
+                    var head = text[k].heading;
+
+                    console.log(head);
+
+                    var para = document.createElement("P");
+                    var textnode = document.createTextNode(head);
+                    para.appendChild(textnode);
+                    console.log(textnode);
+                    document.getElementById("question-" + i).appendChild(para);
+
+                  }
+                }
+
+                function errData(err){
+                  console.log("ERROR!");
+                  console.log(err);
+                }
+
   }
 
-function updateName(){
-  var x = [];
-  var head;
-  var elems = document.querySelectorAll('input');
-  console.log(elems);
 
 
-    console.log(elems.length);
-    for (var i = 0; i < elems.length; i++){
-      console.log("in here");
-      var x = elems[i];
-      var ref = firebase.database().ref("input-" + i);
-      ref.limitToLast(1).on("value", gotData, errData);
-    }
+function updateName(name){
+  var text = document.getElementById(name).value;
+  console.log(text);
+
+
+      var ref = firebase.database().ref(name);
+
+      var data = {
+          heading: text
+        }
+
+      ref.push(data);
+      console.log(data);
+
+  // var x = document.getElementById("toolbar-5");
+  var ref = firebase.database().ref("input-qestion");
+  ref.limitToLast(1).once("value", gotData, errData);
+
 
     function gotData(data){
 
             var text = data.val();
             var keys = Object.keys(text);
-            console.log(keys);
+
 
             for(var i= 0; i < keys.length; i++){
               var k = keys[i];
-              console.log(k);
+
               var head = text[k].heading;
-              x.defaultValue = head;
-              // x.style.background = "grey";
+
+              console.log(head);
+
+
+
+              //create an element
+              var $element = $('<div class="drag"/>').text(head);
+
+              //append it to the DOM
+              $("#question-container").append($element);
+
+              //make it "draggable" and "resizable"
+              $element.draggable();
+
+              return false;
             }
           }
+
+
+
 
         function errData(err){
           console.log("ERROR!");
@@ -337,6 +415,43 @@ function updateName(){
         }
 
 }
+
+// function updateName(){
+//   var x = [];
+//   var head;
+//   var elems = document.querySelectorAll('input');
+//   console.log(elems);
+//
+//
+//     console.log(elems.length);
+//     for (var i = 0; i < elems.length; i++){
+//       console.log("in here");
+//       var x = elems[i];
+//       var ref = firebase.database().ref("input-" + i);
+//       ref.limitToLast(1).on("value", gotData, errData);
+//     }
+//
+//     function gotData(data){
+//
+//             var text = data.val();
+//             var keys = Object.keys(text);
+//             console.log(keys);
+//
+//             for(var i= 0; i < keys.length; i++){
+//               var k = keys[i];
+//               console.log(k);
+//               var head = text[k].heading;
+//               x.defaultValue = head;
+//               // x.style.background = "grey";
+//             }
+//           }
+//
+//         function errData(err){
+//           console.log("ERROR!");
+//           console.log(err);
+//         }
+//
+// }
 
 
 
@@ -400,6 +515,10 @@ function submitText(name){
         }
 
       }
+
+      $(function() {
+          $( ".drag" ).draggable();
+      });
 
 
 

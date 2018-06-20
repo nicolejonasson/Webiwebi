@@ -19,10 +19,10 @@ function draw(){
 
   let rotateMouse = (mouseX * 0.01);
   let mouse= mouseY-100;
-
+  let z = -mouseY+200;
   for (let x = -0; x<50; x+=50){
     push();
-    translate(x*mouse,x,mouse);
+    translate(x*mouse,x,700+z);
     rotateY(rotateMouse);
     fill(250,250,250,0.5);
     strokeWeight(1);

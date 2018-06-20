@@ -9,7 +9,7 @@
     <script src="../p5.min.js"></script>
     <script src="../addons/p5.dom.min.js"></script>
     <script src="../addons/p5.sound.min.js"></script>
-    <script src="sketch.js"></script>
+    <!-- <script src="sketch.js"></script> -->
 
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
@@ -37,6 +37,10 @@
       <div>the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop </div> -->
     </div>
 
+    <a href = "../home/index.html" >
+      <div id= "exit"> go back to common room go back to common room go back to common room go back to common room</div>
+    </a>
+
     <div class="drag" id="draggable-0" >ø</div>
     <div class = "drag" id="draggable-1" >o</div>
     <div class = "drag" id="draggable-2" >æ</div>
@@ -59,32 +63,34 @@
       <div class ="box" id="head-1">wellcome</div>
       <div class ="box" id="head-2">to the</div>
       <div onclick = "show('head-4')" class ="box" id="head-3">workshop</div>
-      <div class ="box" id="times">In the workshop you can explore and learn about the possibilities <br>
-        of making this a collaborative place. This place is dedicated to <br>
-         everything  type and open source related</div>
 
-        <div onclick = "show('head-5')" class ="box" id="head-4">we make things</div>
-        <div onclick = "show('head-6')" class ="box" id="head-5">together</div>
+        <div onclick = "show('head-5')" class ="box" id="head-4">join the </div>
+        <div onclick = "show('head-6')" class ="box" id="head-5">collaboration </div>
+        <div onclick = "show('head-7')" class ="box" id="head-6"> and </div>
+        <div onclick = "show('head-8')" class ="box" id="head-7">particapation </div>
 
-          <div onclick = "show('head-7')" class ="box" id="head-6">participate in collabfont</div>
-          <div onclick = "show('head-8')"class ="box" id="head-7">share open source things</div>
+          <div onclick = "show('head-9')" class ="box" id="head-8">take part in making</div>
+          <div onclick = "show('head-10')"class ="box" id="head-9">the typeface</div>
 
-            <div onclick = "show('head-9')" class ="box" id="head-8">collaborative typeface</div>
-            <div class ="box" id="head-9">sharing space</div>
+            <div onclick = "show('head-11')" class ="box" id="head-10">and contribute to </div>
+            <div conclick = "show('head-11')" class ="box" id="head-11">building this place</div>
     </div>
 
     <div id= "side"></div>
 
     <div id = "participate">
-      <div class = "small" id= "small" > be a part of the collaborative typeface </div>
+      <div class = "small" id= "small" > be a part of collaborative typeface </div>
       <div class = "greyBox" id= "h1" >make whatever</div>
-      <div class = "greyBox" id= "brød" >Contribute to the webpage <br>
-        The typeface of this webpage, is made in <br>
-        collaboration with students from kadk. <br>
-        The font file is now on github, and available <br>
-        for all to download and modify. <br>
-        All you need is a type editor, then you can make <br>
-        whatever changes you want.</div>
+      <div class = "greyBox" id= "brød" >
+        This typeface is an ongoing collaboration and experiment.
+        everybody can contribute and work on this typeface.
+   	    The font file is on GitHub, ready for everybody to download and modify.
+         When a new version is uploaded, the typeface will change for the whole website.
+  	     There are no rules, all you need is a font editor. 
+         If you want to take part,visit the GitHub repository and follow the guide: 
+         <a href=" https://github.com/nicolejonasson/CollaborativeTypeface"> https://github.com/nicolejonasson/CollaborativeTypeface </a>
+
+     </div>
       <div class = "greyBox" id= "h2" >changes you want  </div>
 
       <!-- <div id = "comments">
@@ -114,13 +120,22 @@
 
         <div id = "bottom">
           <div  class ="bottom-times" id="firepad-7"></div>
+
+          <div id= "ex-projects">link to relevant projects</div>
           <div id= "projects">projects</div>
+          <div class= "bottom-ø">ø</div>
 
           <div  class ="bottom-times" id="firepad-8"></div>
 
           <div id= "sources">sources</div>
+          <div id= "ex-sources">share opensource typefaces </div>
+          <div class= "bottom-ø">o</div>
+
           <div  class ="bottom-times" id="firepad-9"></div>
+
           <div id= "com">comments</div>
+          <div id= "ex-comments">write comments for the typeface</div>
+          <div class= "bottom-ø">æ</div>
         </div>
 
 

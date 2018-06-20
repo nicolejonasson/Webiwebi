@@ -34,6 +34,27 @@ body {
 }
 
 
+#exit{
+  padding-top: 30px;
+  z-index: 10;
+  /* border-radius: 25px; */
+  background: rgba(250, 250, 250, 0.5);
+  box-shadow:  -5px -5px 20px rgba(0, 0, 0, 0.1);
+  height: 3000px;
+  width: 40px;
+  line-height: 40px;
+  letter-spacing: 10px;
+  font-family: "CT";
+  position: fixed;
+  /* position: absolute; */
+  top: 0;
+  right: 0;
+  font-size: 15px;
+  color: black;
+  writing-mode: vertical-rl;
+}
+
+
 .drag{
     position: absolute;
     font-family: "CT";
@@ -45,12 +66,12 @@ body {
 }
 
 #draggable-0{
-  left:5%;
+  right:5%;
   top:80%;
 }
 
 #draggable-1{
-  left:5%;
+  right:5%;
   top:75%;
 }
 
@@ -59,54 +80,57 @@ body {
   top:70%;
 }
 
+
+
+
 #draggable-p{
-  left:2%;
+  left:5%;
   top:100%;
 }
 #draggable-a{
-  left:2%;
+  left:5%;
   top:110%;
 }
 #draggable-r{
-  left:2%;
+  left:5%;
   top:120%;
 }
 #draggable-t{
-  left:2%;
+  left:5%;
   top:130%;
 }
 
 #draggable-i{
-  left:2%;
+  left:5%;
   top:140%;
 }
 
 #draggable-s{
-  left:2%;
+  left:5%;
   top:150%;
 }
 
 #draggable-ii{
-  left:2%;
+  left:5%;
   top:160%;
 }
 
 #draggable-pp{
-  left:2%;
+  left:5%;
   top:167%;
 }
 
 #draggable-aa{
-  left:2%;
+  left:5%;
   top:177%;
 }
 
 #draggable-tt{
-  left:2%;
+  left:5%;
   top:187%;
 }
 #draggable-e{
-  left:2%;
+  left:5%;
   top:195%;
 }
 
@@ -136,10 +160,10 @@ body {
   display: grid;
   position: relative;
   top: 20%;
-  left: 0%;
+  left: 10%;
   /* transform: translate(-50%, -50%); */
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(7, 1fr);
 }
 
 
@@ -244,6 +268,26 @@ body {
   visibility: hidden;
 }
 
+#head-10{
+  z-index: 1;
+  font-size: 15px;
+  /* line-height: normal; */
+  letter-spacing: 10px;
+  grid-column: 5;
+  grid-row:6;
+  visibility: hidden;
+
+}
+
+#head-11{
+  z-index: 1;
+  font-size: 15px;
+  /* line-height: normal; */
+  letter-spacing: 5px;
+  grid-column: 5;
+  grid-row:7;
+  visibility: hidden;
+}
 
 
 
@@ -267,31 +311,30 @@ body {
 .small{
 
   font-family: "CT";
-  font-size: 10px;
-  /* letter-spacing: 10px; */
+  font-size: 15px;
+  letter-spacing: 5px;
   color: black;
 
 }
 
 
-
 .greyBox{
-  width: 400px;;
-  height: auto;
+  width: 450px;;
+  /* height: auto; */
   background: rgba(220,220,220, 0.5);
   padding: 15px;
   border-radius: 15px;
   border: 0.5px solid rgba(220,220,220, 0.5);
   font-family: "CT";
-  font-size: 15px;
+  font-size: 25px;
   letter-spacing: 10px;
   margin:5px;
-  text-align: left;
+  text-align: center;
 }
 
 #side{
   position: absolute;
-  left:2%;
+  left:3%;
   top:100%;
 
   width: 100px;
@@ -304,9 +347,9 @@ body {
 }
 
 #small{
-  width: 350px;
+  width: 500px;
   margin-left: 20px;
-  margin-top: -20px;
+  margin-top: -50px;
   height: 50px;
   grid-column: 2;
   grid-row: 2;
@@ -325,18 +368,29 @@ body {
 }
 
 #brød{
-  height:auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   grid-column: 2;
   grid-row: 3;
   font-family: "times New Roman";
-  font-size: 15px;
-  line-height: normal;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: left;
   letter-spacing: normal;
 
 }
 
-#comments > div{
+a{
+  color:black;
+  text-decoration: none;
+}
 
+
+
+
+#comments > div{
   max-width: 1000px;
   height: 10px;
 }
@@ -454,12 +508,13 @@ body {
 #bottom{
   position: relative;
   width: 100%;
-  margin-top: 50%;
+  margin-top: 60%;
   left:10%;
   display: grid;
   grid-template-columns: 500px 500px 500px;
   grid-template-rows: 2;
-  grid-gap: 100px;
+  grid-column-gap: 200px;
+  grid-row-gap:100px;
 }
 
 #com{
@@ -492,6 +547,64 @@ body {
   grid-row: 2;
 }
 
+
+
+#ex-comments{
+  margin-left: 15%;
+  line-height: 2;
+  background: rgba(220,220,220, 0.5);
+  padding: 5px;
+  border-radius: 15px;
+  border: 0.5px solid rgba(220,220,220, 0.5);
+  font-family: "CT";
+  font-size: 15px;
+  letter-spacing: 10px;
+  font-family: "ct";
+  grid-column: 1;
+  grid-row: 1;
+  text-align: center;
+}
+
+
+#ex-sources{
+  margin-left: 15%;
+  line-height: 2;
+  background: rgba(220,220,220, 0.5);
+  padding: 5px;
+  border-radius: 15px;
+  border: 0.5px solid rgba(220,220,220, 0.5);
+  font-family: "CT";
+  font-size: 15px;
+  letter-spacing: 10px;
+  font-family: "ct";
+  grid-column: 2;
+  grid-row: 1;
+  text-align: center;
+}
+
+#ex-projects{
+  margin-left: 15%;
+  line-height: 2;
+  background: rgba(220,220,220, 0.5);
+  padding: 5px;
+  border-radius: 15px;
+  border: 0.5px solid rgba(220,220,220, 0.5);
+  font-family: "CT";
+  font-size: 15px;
+  letter-spacing: 10px;
+  font-family: "ct";
+  grid-column: 3;
+  grid-row: 1;
+  text-align: center;
+}
+
+.bottom-ø{
+  font-family: "CT";
+  font-size: 40px;
+  margin-top: -600px;
+  grid-row: auto;
+}
+
 #firepad-7{
   margin-left: 50px;
   grid-column: 1;
@@ -512,12 +625,15 @@ body {
 
 
 .bottom-times .firepad-richtext .CodeMirror {
-  border: 0.5px solid black;
+  /* border: 0.5px solid black; */
+  background: rgba(250, 250, 250, 0.5);
+  box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
   font-family: "times New Roman";
   height: 800px;
   width: 450px;
-  font-size: 30px;
-  line-height: 2;
+  font-size: 20px;
+  padding: 20px;
+  line-height: normal;
   color: black;
   text-align: left;
 }

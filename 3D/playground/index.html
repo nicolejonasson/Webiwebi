@@ -100,6 +100,30 @@
             <div class ="box" id="head-9">sharing space</div> -->
     </div>
 
+    <div id= "grad">
+      <div id="change"> paint the room</div>
+      <button onclick = "grad('color-input')" > paint </button>
+      <input type = "text" id="color-input" value = "write a color">
+
+    <div  class="colors"> <span> try fx. <br></span>
+      Fuchsia <br>
+      Lavender <br>
+      Lime <br>
+      MediumAquaMarine<br>
+      MistyRose <br>
+      OrangeRed <br>
+      Turquoise <br>
+      Thistle <br>
+      PaleGreen <br>
+      LightSalmon <br>
+      honeyDew <br>
+      DarkSlateGrey <br>
+      Aqua <br>
+      AliceBlue <br>
+      Sienna<br>
+      <!-- ttps://www.w3schools.com/cssref/css_colors.asp<br> -->
+    </div>
+    </div>
 
     <div id="heading"> drawing canvas</div>
 
@@ -159,17 +183,6 @@
 
     <script>
 
-      // function hoverIn(){
-      //   var x = document.getElementById("times");
-      //
-      //   if (x.style.visibility == 'visible'){
-      //     x.style.visibility = 'hidden';
-      //   }
-      //   else{
-      //     x.style.visibility = 'visible';
-      //
-      //   }
-      // }
 
       function show(name){
         var x = document.getElementById(name);
@@ -187,6 +200,14 @@
             $( ".drag" ).draggable();
         });
 
+        function grad(color){
+          var x = document.getElementById(color).value;
+          var v = "red";
+
+          $('body').css({'background-image': 'linear-gradient(to top,  white 0%,'+ x +' 50%, white 100%)'});
+          console.log(x);
+
+        }
     </script>
 
   </body>

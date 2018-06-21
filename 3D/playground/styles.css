@@ -54,6 +54,50 @@ body {
 
 }
 
+#change{
+  text-align: center;
+  padding: 20px;
+
+  font-family: "ct";
+  font-size: 20px;
+  letter-spacing: 10px;
+
+}
+
+
+#grad{
+  text-align: center;
+  margin-top: 200px;
+  margin-left: 100px;
+  height: 150px;
+  width: 400px;
+  border-radius: 15px;
+  background: rgb(250,250,250, 0.5);
+  box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+#grad:hover .colors{
+  visibility: visible;
+
+}
+
+
+.colors{
+  padding: 20px;
+  font-size: 15px;
+  position: absolute;
+  background: rgb(220,220,220, 0.5);
+  box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  visibility: hidden;
+}
+
+span{
+  font-family: "ct";
+}
+
+
 
 .drag{
     margin-top: 100px;
@@ -230,24 +274,23 @@ body {
 
 #draggable-0{
   left:30%;
-  top:145%;
+  top:170%;
 }
 
 #draggable-1{
   left:30%;
-  top:238%;
+  top:265%;
 }
 
 #draggable-2{
   left:88%;
-  top:145%;
+  top:170%;
 }
 
 #draggable-3{
   left:88%;
-  top:238%;
+  top:265%;
 }
-
 
 
 
@@ -408,89 +451,6 @@ body {
   grid-row:7;
   visibility: hidden;
 }
-
-
-
-/* #head-4{
-  margin-top: 100px;
-  writing-mode: vertical-lr;
-  height: 500px;
-  width: 50px;
-  z-index: 0;
-  font-size: 20px;
-  grid-column: 4;
-  grid-row:3;
-  visibility: hidden;
-
-}
-
-#head-5{
-  z-index: 0;
-  width: 300px;
-  margin-left: 200px;
-  font-size: 20px;
-  grid-column: 3;
-  grid-row:4;
-  visibility: hidden;
-
-}
-
-#head-6{
-  margin-top: 200px;
-  margin-left: 120px;
-  writing-mode: vertical-lr;
-  height: 400px;
-  width: 50px;
-  z-index: 1;
-  font-size: 15px;
-  letter-spacing: 10px;
-  grid-column: 3;
-  grid-row:3;
-  visibility: hidden;
-
-}
-
-#head-7{
-  margin-top: 150px;
-  margin-left: -450px;
-  z-index: 1;
-  font-size: 15px;
-  letter-spacing: 5px;
-  grid-column: 3;
-  grid-row:3;
-  visibility: hidden;
-}
-
-
-#head-8{
-  writing-mode: vertical-lr;
-  margin-top: 200px;
-  height: 400px;
-  width: 50px;
-  z-index: 1;
-  font-size: 15px;
-  letter-spacing: 10px;
-  grid-column: 2;
-  grid-row:3;
-  visibility: hidden;
-
-}
-
-#head-9{
-  z-index: 1;
-  font-size: 15px;
-  letter-spacing: 5px;
-  grid-column: 2;
-  grid-row:5;
-  visibility: hidden;
-} */
-
-
-
-
-
-
-
 
 
 
@@ -676,6 +636,7 @@ button{
   width: auto;
   height: auto;
   font-family: "CT";
+  letter-spacing: 5px;
   font-size: 15px;
   /* box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1); */
 }

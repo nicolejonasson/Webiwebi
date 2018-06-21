@@ -17,94 +17,21 @@ body {
   position: relative;
 }
 
-.drag{
-    position: absolute;
-    font-family: "CT";
-    font-size: 15px;
-    z-index: 10;
-    text-align: center;
-    cursor: -webkit-grabbing;
-    cursor: grabbing;
-    -webkit-user-select: none;
-    display: grid;
-    grid-auto-rows: 20;
-}
-
-#draggable-0{
-  left:2%;
-  top:5%;
-}
-
-#draggable-1{
-  left:2%;
-  top:10%;
-}
-
-#draggable-2{
-  left:2%;
-  top:15%;
-}
-
-#draggable-p{
-  left:2%;
-  top:20%;
-}
-#draggable-a{
-  left:2%;
-  top:25%;
-}
-#draggable-r{
-  left:2%;
-  top:30%;
-}
-#draggable-t{
-  left:2%;
-  top:35%;
-}
-
-#draggable-i{
-  left:2%;
-  top:40%;
-}
-
-#draggable-s{
-  left:2%;
-  top:45%;
-}
-
-#draggable-ii{
-  left:2%;
-  top:50%;
-}
-
-#draggable-pp{
-  left:2%;
-  top:55%;
-}
-
-#draggable-aa{
-  left:2%;
-  top:60%;
-}
-
-#draggable-tt{
-  left:2%;
-  top:65%;
-}
-#draggable-e{
-  left:2%;
-  top:70%;
+#canvas-container{
+  top:0;
+  left: 0;
 }
 
 
 #wrapper{
   width: 100%;
   height: 80%;
+  top: 20%;
 
   position: relative;
   display: grid;
   grid-template-columns: repeat(5,1fr);
-  grid-template-rows:repeat(4,1fr);
+  grid-template-rows:repeat(5,1fr);
   /* margin-right: ; */
   margin-left: 2%;
 
@@ -122,58 +49,52 @@ body {
     border-radius: 25px;
 }
 
-#wrapper > div:hover{
+/* #wrapper > div:hover{
   background: rgba(200, 200, 200, 0.5);
   color: white;
-}
+} */
 
 #intro{
-  height: 80px;
-  margin-left: 25%;
-  margin-right: 25%;
-  grid-column: 2/span 3;
-  grid-row: 1;
+  height: 600px;
+  /* font-size: 40px; */
+  width: 500px;
+  /* margin-left: 30%;
+  margin-right: 30%; */
+  grid-column: 3;
+  grid-row: 3;
 }
 
 #box{
-  height: 80px;
-  margin-left: 25%;
-  margin-right: 25%;
+  width: 400px;
+  height: 150px;
+  margin-top: 100px;
+  margin-left: 50px;
   margin-bottom: 0px;
-  padding-top: 0px;
-  grid-column: 2/span 3;
-  grid-row: 2;
-}
-
-#box-0{
-  width: 500px;
-  height: 300px;
-  visibility: hidden;
   grid-column: 3;
   grid-row: 3;
-
 }
 
 
-#box-1{
+
+/* #box-1{
   visibility: hidden;
   grid-column: 2;
   grid-row: 3;
 
-}
+} */
 
 
 #box-2{
   visibility: hidden;
   grid-column: 2;
-  grid-row: 3;
+  grid-row: 2;
 }
 
 
 #box-3{
   visibility: hidden;
   grid-column: 4;
-  grid-row: 3;
+  grid-row: 2;
 }
 
 
@@ -192,28 +113,29 @@ body {
 
 
 #box-6{
+  /* margin-top: -150px; */
   visibility: hidden;
   /* margin-top: -50px; */
   grid-column: 5;
-  grid-row: 3;
+  grid-row: 1;
 }
 
 #box-7{
-  /* margin-top: -50px; */
+  /* margin-top: -150px; */
   visibility: hidden;
   grid-column: 1;
-  grid-row: 3;
+  grid-row: 1;
 }
 
 #box-8{
-  /* margin-top: 100px; */
+  margin-top: 100px;
   visibility: hidden;
   grid-column: 5;
   grid-row: 4;
 }
 
 #box-9{
-  /* margin-top: 100px; */
+  margin-top: 100px;
   visibility: hidden;
   grid-column: 1;
   grid-row: 4;
@@ -221,26 +143,38 @@ body {
 
 p.big{
   font-family: "CT";
+  font-size: 60px;
   text-align: center;
   /* padding-left: 20px;
   padding-right: 20px; */
+  margin-top: 20px;
   letter-spacing: 20px;
-  font-family: "ct";
-  font-size: 40px;
-  margin: 10px;
-  line-height: 2;
+  line-height: 1;
 
+
+}
+
+span{
+  padding: 5px 10px 5px 10px;
+  text-align: center;
+  font-family: "CT";
+  font-size: 20px;
+  letter-spacing: 5px;
+  line-height: 2;
+  text-transform: lowercase;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
 }
 
 p.small{
   font-family: "times new roman";
   /* font-family: "ct"; */
   /* letter-spacing: 5px; */
-  margin: 0px;
-  font-size: 18px;
+  margin-bottom: 200px;
+  font-size: 22px;
   text-align: center;
-  line-height: 1.5;
-   text-transform: lowercase;
+  line-height: 1.2;
 }
 
 
@@ -248,7 +182,7 @@ p.small{
   font-family: "Times New Roman";
   font-size: 15px;
   width: 300px;
-  height: 100px;
+  height: 80px;
 }
 
 .box{
@@ -264,8 +198,9 @@ p.small{
 }
 
 a{
-  margin-top: 10px;
-  float: left;
+  /* margin-top: 10px; */
+  margin-left:100px;
+  text-align: center;
   padding: 5px;
   border: 0.5px solid black;
   font-family: "ct";

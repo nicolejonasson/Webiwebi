@@ -18,6 +18,7 @@
   </head>
 
   <body>
+    <!-- <div id="canvas-container"></div> -->
     <!-- <a href = "../library/index.html" > LIBRARY </a>
     <a href = "../kitchen/index.html" > KITCHEN </a>
     <a href = "../playground/index.html" > PLAYGROUND </a>
@@ -43,17 +44,39 @@
 
     <div id= "wrapper">
 
-      <div onclick= "showHide('box-0')"  id = "intro" >
-        <p class = "big">wellcome to</p>
+      <div onclick= "showRooms()" id = "intro" >
+        <p class = "small"> <span> wellcome to </span> <br> </p>
+
+
+        <p class = "small"> <br> A home for all the people interested in <br> design and visual communication.<br>
+
+                        <br>A place where everyone can contribute <br>
+                        and benefit from each others knowledge. <br><br>
+
+                        <span> Sharing and caring <br></span> <span> is waiting for you </span>
+
+                        <br><br>Click to enter and visit the rooms.
+        </p>
       </div>
 
-      <div onclick= "showHide('box-0')"  id = "box" >
-        <p class = "big">common rooms</p>
+      <div onclick= "showHide('intro')"  id = "box" >
+        <p class = "big">common room</p>
       </div>
 
-        <div onclick= "showRooms()"  id="box-0">
-          <p class = "small"> This is a home for all the people interested in the world of design and visual communication. A place for sharing and caring, where we can benefit from each others knowledge and grow together. Enter the rooms to find out more aobut this place and how you can use it.</p>
-        </div>
+      <!-- <div onclick= "showHide('box-0')"  id = "box" >
+        <p class = "big">common room</p>
+      </div> -->
+
+        <!-- <div onclick= "showRooms()"  id="box-0">
+          <p class = "small"> The home for all people interested in visual communication.<br>
+                          A place where everyone can contribute and
+                          benefit from each others knowledge.
+
+                          <span> Sharing and caring is waiting for you </span>
+
+                          Click to enter and visit the rooms.
+          </p>
+        </div> -->
 
         <!-- <div onclick= "showRooms()" id = "box-1">
             <p class = "small"> there are four rooms you can visit </p>
@@ -83,7 +106,7 @@
           <a href = "../library/index.html" >enter here </a>
         </div>
         <div class="des" id = "box-8">
-           A room for play. Draw a drawing and have fun.<br><br>
+           A place to play, draw a drawing and have fun.<br><br>
           <a href = "../playground/index.html" >enter here </a>
         </div>
 

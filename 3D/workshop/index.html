@@ -9,7 +9,7 @@
     <script src="../p5.min.js"></script>
     <script src="../addons/p5.dom.min.js"></script>
     <script src="../addons/p5.sound.min.js"></script>
-    <!-- <script src="sketch.js"></script> -->
+    <script src="sketch.js"></script>
 
     <script src="../js/jquery-min.js"></script>
     <script src="../js/jquery-ui.js"></script>
@@ -33,7 +33,7 @@
   <body onload="init()">
     <!-- <div onclick= "showRooms()" id ="test">test</div> -->
     <div id= "head-bar">
-      <div>the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop </div>
+      <div> workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop </div>
       <!-- <div>the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop </div>
       <div>the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop </div> -->
     </div>
@@ -45,6 +45,9 @@
     <div class="drag" id="draggable-0" >ø</div>
     <div class = "drag" id="draggable-1" >o</div>
     <div class = "drag" id="draggable-2" >æ</div>
+    <div class="drag" id="draggable-3" >ø</div>
+    <div class = "drag" id="draggable-4" >o</div>
+    <div class = "drag" id="draggable-5" >æ</div>
 
 
     <div class="drag" id="draggable-p" >p</div>
@@ -67,32 +70,62 @@
 
         <div onclick = "show('head-5')" class ="box" id="head-4">join the </div>
         <div onclick = "show('head-6')" class ="box" id="head-5">collaboration </div>
-        <div onclick = "show('head-7')" class ="box" id="head-6"> and </div>
-        <div onclick = "show('head-8')" class ="box" id="head-7">particapation </div>
+        <div onclick = "show('head-7')" class ="box" id="head-6"> and particapation</div>
+        <div onclick = "show('head-8')" class ="box" id="head-7">take part in making</div>
 
-          <div onclick = "show('head-9')" class ="box" id="head-8">take part in making</div>
-          <div onclick = "show('head-10')"class ="box" id="head-9">the typeface</div>
+          <div onclick = "show('head-9')" class ="box" id="head-8">the typeface</div>
+          <div onclick = "show('head-10')"class ="box" id="head-9">and contribute to</div>
 
-            <div onclick = "show('head-11')" class ="box" id="head-10">and contribute to </div>
-            <div conclick = "show('head-11')" class ="box" id="head-11">building this place</div>
+            <div onclick = "show('head-11')" class ="box" id="head-10">building this place</div>
+            <!-- <div conclick = "show('head-11')" class ="box" id="head-11">building this place</div> -->
     </div>
 
     <div id= "side"></div>
 
     <div id = "participate">
-      <div class = "small" id= "small" > be a part of collaborative typeface </div>
-      <div class = "greyBox" id= "h1" >make whatever</div>
-      <div class = "greyBox" id= "brød" >
-        This typeface is an ongoing collaboration and experiment.
-        everybody can contribute and work on this typeface.
-   	    The font file is on GitHub, ready for everybody to download and modify.
-         When a new version is uploaded, the typeface will change for the whole website.
-  	     There are no rules, all you need is a font editor. 
-         If you want to take part,visit the GitHub repository and follow the guide: 
-         <a href=" https://github.com/nicolejonasson/CollaborativeTypeface"> https://github.com/nicolejonasson/CollaborativeTypeface </a>
 
-     </div>
-      <div class = "greyBox" id= "h2" >changes you want  </div>
+        <div class = "small" id= "type" > how to edit the typeface: </div>
+        <div class = "greyBox" id= "h1" >make whatever</div>
+        <div class = "greyBox" id= "h2" >changes you want </div>
+        <div class = "greyBox" id= "brød" >
+          <p>
+          The typeface is an ongoing collaboration and experiment.<br>
+          It is opensource and everyone can contribute and work on it.<br>
+     	    The font file is on GitHub, ready to download and modify.<br>
+
+          When edited, the typeface will change in all rooms.<br>
+
+    	    There are no rules, all you need is a font editor. <br>
+          Dont be shy, use your typo skills (or lack thereoff) and <br>
+          make great impovements.<br><br>
+
+          Visit the GitHub repository and follow the guide: <br><br>
+           <a href=" https://github.com/nicolejonasson/CollaborativeTypeface"> github page</a>
+         </p>
+       </div>
+
+       <div class = "small" id= "code" > how to edit the code: </div>
+       <div class = "greyBox" id= "code-brød" >
+         <p>
+          Change the code and be a part of building this place.<br>
+         The code for this webpage is open source and anybody<br>
+         who would like to edit or contribute is wellcome.<br>
+         You could change the colors. The typeface.<br>
+         Make some inprovements, add another page, or whatever.<br><br>
+         It is on github ready to be modified and inproved.<br><br>
+
+         Visit the GitHub repository and find the code: <br><br>
+          <a href=" https://github.com/nicolejonasson/CollaborativeTypeface"> github page</a>
+        </p>
+      </div>
+
+
+
+      <div class = "greyBox" id= "h4"> the typeface </div>
+       <div class = "greyBox" id= "h3"> play with the letters</div>
+
+
+
 
       <!-- <div id = "comments">
         <div id= "input-comment">Comment <input type = "text"></div>

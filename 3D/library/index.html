@@ -73,28 +73,18 @@
 
 
 
-
-
-  <!-- <div class = "text">
-    <div id = "breaker">
-        <img src="paper.gif" id = "gif-1" onclick = "showBox('greyBox')">
-        <img src="paper.gif" id = "gif-2">
-        <img src="paper.gif" id = "gif-3">
-        <img src="paper.gif" id = "gif-4">
-        <img src="paper.gif" id = "gif-5">
-
-        <div class = "greyBox" id = "question"> why be a designer? </div>
-    </div>-->
     <div id="bookmarks-wrapper">
       <div id = "bookmark" > bookmarks </div>
 
-      <div class= "ex-box">Start a tread in one of the bookmarks or continue on an existing one.
-        Give a headline for the bookmark in the boxes underneath. </div>
-      <div class= "ex-box">In the bookmark you can paste in links, references, or whatever you find relevant.
-        Write a small description of your topic if you see fit. </div>
+      <div class= "ex-box">The bookmarks are a collection of links. Share texts, books, webpages, or whatever you find interesting.
+        Write a small description of the topic and link, if you feel like it. <br>
+</div>
+      <div class= "ex-box">If you want to start a new topic for an empty bookmark, give it a name in the boxes to the left.<br>
+      </div>
+
 
     </div>
-    <!-- <div class="drag" id = "explanation"> find the bookmark in the list or write your own headline for a bookmark</div> -->
+    <div class="drag" id = "explanation"> find the bookmark in the list or write your own headline for a bookmark</div>
 
 
       <div class="drag" id="draggable-0" >ø</div>
@@ -102,10 +92,12 @@
 
 
 
-  <!-- <button onclick ="updateName()"> submit </button> -->
+  <!-- <button onclick ="updateList()"> submit </button>
+ -->
+
 
   <div class = "links">
-      <div id = "heading"> headline </div>
+      <div onmousemove ="updateList()" id = "heading"> subject </div>
       <li onclick ="firepadStyles('firepad-0')">o
         <input onblur="submitText('input-0')" type = "text" id = "input-0">
       </li>
@@ -315,7 +307,7 @@
 
       for (var i = 0; i < 23; i++) {
 
-        var firepadRef = firebase.database().ref("box"+i);
+        var firepadRef = firebase.database().ref("library"+i);
 
         var codeMirror = CodeMirror(document.getElementById("firepad-"+i), { lineWrapping: true });
 
@@ -358,13 +350,14 @@
                   console.log(err);
                 }
 
+
+
   }
 
 
 
 function updateName(name){
   var text = document.getElementById(name).value;
-  console.log(text);
 
 
       var ref = firebase.database().ref(name);
@@ -374,7 +367,6 @@ function updateName(name){
         }
 
       ref.push(data);
-      console.log(data);
 
   // var x = document.getElementById("toolbar-5");
   var ref = firebase.database().ref("input-qestion");
@@ -419,42 +411,44 @@ function updateName(name){
 
 }
 
-// function updateName(){
-//   var x = [];
-//   var head;
-//   var elems = document.querySelectorAll('input');
-//   console.log(elems);
-//
-//
-//     console.log(elems.length);
-//     for (var i = 0; i < elems.length; i++){
-//       console.log("in here");
-//       var x = elems[i];
-//       var ref = firebase.database().ref("input-" + i);
-//       ref.limitToLast(1).on("value", gotData, errData);
-//     }
-//
-//     function gotData(data){
-//
-//             var text = data.val();
-//             var keys = Object.keys(text);
-//             console.log(keys);
-//
-//             for(var i= 0; i < keys.length; i++){
-//               var k = keys[i];
-//               console.log(k);
-//               var head = text[k].heading;
-//               x.defaultValue = head;
-//               // x.style.background = "grey";
-//             }
-//           }
-//
-//         function errData(err){
-//           console.log("ERROR!");
-//           console.log(err);
-//         }
-//
-// }
+
+
+function updateList(){
+  var x = [];
+  var head;
+  console.log(head);
+  var elems = document.querySelectorAll('input');
+
+    for (var i = 0; i < elems.length; i++){
+      console.log("in here");
+      var x = elems[i];
+      var ref = firebase.database().ref("input-" + i);
+
+        ref.limitToLast(1).on("value", gotData, errData);
+    }
+
+
+    function gotData(data){
+
+            var text = data.val();
+            var keys = Object.keys(text);
+            console.log(keys);
+
+            for(var i= 0; i < keys.length; i++){
+              var k = keys[i];
+              console.log(k);
+              var head = text[k].heading;
+              x.defaultValue = head;
+              // x.style.background = "grey";
+            }
+          }
+
+        function errData(err){
+          console.log("ERROR!");
+          console.log(err);
+        }
+
+}
 
 
 

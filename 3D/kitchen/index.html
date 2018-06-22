@@ -39,7 +39,7 @@
 
 
   <div id= "head-bar">
-  <div>the kitchen the kitchen the kitchen the kitchen the kitchen the kitchen the kitchen</div>
+  <div>the kitchen the kitchen the kitchen the kitchen the kitchen the kitchen the kitchen the kitchen</div>
 </div>
 
     <a href = "../home/index.html" >
@@ -47,9 +47,9 @@
     </a>
 
   <div id= "head">
-    <div class ="box" id="head-1">wellcome</div>
-    <div class ="box" id="head-2">to the</div>
-      <div onclick = "show('head-4')" class ="box" id="head-3">kitchen</div>
+    <div class ="box-head" id="head-1">wellcome</div>
+    <div class ="box-head" id="head-2">to the</div>
+      <div onclick = "showHide('head-4')" class ="box-head" id="head-3">kitchen <i class="arrow left"></i></div>
 
         <div onclick = "show('head-5')" class ="box" id="head-4">the place for </div>
         <div onclick = "show('head-6')" class ="box" id="head-5"> making together  </div>
@@ -66,7 +66,7 @@
               <div class ="box" id="head-9">sharing space</div> -->
   </div>
   <div id= "grad">
-    <button onclick = "grad('color-input')" >submit</button>
+    <button onclick = "grad('color-input')" > change </button>
     <input type = "text" id="color-input" value = "write a color">
   </div>
 
@@ -160,7 +160,25 @@
 
   }
 
+  function showHide(name){
+    var x = document.getElementById(name);
+    var elems = document.getElementsByClassName("box");
 
+    if (x.style.visibility == 'visible'){
+      // x.style.visibility = 'hidden';
+
+      for (var i = 0; i < elems.length; i++) {
+        var y = elems[i];
+        if (y.style.visibility == 'visible'){
+          y.style.visibility = 'hidden';
+        }
+      }
+
+    }
+    else{
+      x.style.visibility = 'visible';
+    }
+  }
 
   function show(name){
     var x = document.getElementById(name);

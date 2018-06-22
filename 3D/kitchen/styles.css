@@ -26,7 +26,7 @@ body {
 #head-bar{
   z-index: 1000;
   padding: 5px;
-  width: 3000px;
+  width: 3200px;
   letter-spacing: 10px;
   font-family: "CT";
   position: fixed;
@@ -59,6 +59,26 @@ body {
   writing-mode: vertical-rl;
 }
 
+
+i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    padding: 15px;
+    float: left;
+    margin-top: 10px;
+    margin-left: : 10px;
+}
+
+
+
 .box{
   -webkit-user-select: none;
   cursor: cell;
@@ -69,13 +89,28 @@ body {
   font-family: "CT";
   border-radius: 15px;
   color: black;
-  text-align: right;
+  text-align: center;
   background: rgba(255, 255, 255, 0.5);
   box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
   letter-spacing: 20px;
 
 }
+.box-head{
+  -webkit-user-select: none;
+  cursor: cell;
+  width: 500px;
+  height: 50px;
+  line-height: 50px;
+  padding: 20px;
+  font-family: "CT";
+  border-radius: 15px;
+  color: black;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
+  letter-spacing: 20px;
 
+}
 
 #head{
   margin:-10px;

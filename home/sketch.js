@@ -10,6 +10,7 @@ function preload(){
 
 function setup() {
   canvas= createCanvas(windowWidth+600,windowHeight+500,WEBGL);
+  // canvas.parent("canvas-container");
   canvas.position(0,0);
   canvas.style("z-index","-1");
   background(150);

@@ -18,6 +18,7 @@ body {
 }
 
 #canvas-container{
+  width: 110%;
   top:0;
   left: 0;
 }
@@ -44,15 +45,15 @@ body {
     padding: 20px;
     border-radius: 15px;
     color: black;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.8);
     box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
 }
 
-/* #wrapper > div:hover{
+#wrapper > .box:hover{
   background: rgba(200, 200, 200, 0.5);
   color: white;
-} */
+}
 
 #intro{
   height: 600px;
@@ -65,6 +66,7 @@ body {
 }
 
 #box{
+  background: rgba(255, 255, 255, 0.1);
   width: 400px;
   height: 150px;
   margin-top: 100px;
@@ -72,6 +74,11 @@ body {
   margin-bottom: 0px;
   grid-column: 3;
   grid-row: 3;
+}
+
+#box:hover{
+  background: rgba(200, 200, 200, 0.5);
+  color: white;
 }
 
 
@@ -185,6 +192,12 @@ p.small{
   height: 80px;
 }
 
+.box:hover > div {
+  background: rgba(220, 220, 220, 0.5);
+  color: white;
+  border: 0.5px solid white;
+}
+
 .box{
   width: 400px;
   height: 50px;
@@ -197,13 +210,52 @@ p.small{
 
 }
 
+
 a{
-  /* margin-top: 10px; */
-  margin-left:100px;
+  /* margin-left:90px; */
   text-align: center;
-  padding: 5px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 10px;
   border: 0.5px solid black;
   font-family: "ct";
   text-decoration: none;
   color:black;
+}
+
+a:hover{
+  background: rgba(220, 220, 220, 0.5);
+  color: white;
+  border: 0.5px solid white;
+}
+
+i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    padding: 15px;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    padding: 15px;
+    float: left;
+    margin-top: 10px;
+    margin-left: : 10px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }

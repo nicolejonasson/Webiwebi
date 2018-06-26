@@ -283,20 +283,41 @@ span{
 }
 
 #draggable-2{
-  left:88%;
+  left:90%;
   top:170%;
 }
 
 #draggable-3{
-  left:88%;
+  left:90%;
   top:265%;
 }
 
 
 
+i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
 
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    padding: 15px;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
 
-
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    padding: 15px;
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+}
 
 
 
@@ -316,9 +337,31 @@ span{
   background: rgba(255, 255, 255, 0.5);
   box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
   letter-spacing: 10px;
-
 }
 
+.box-head{
+  -webkit-user-select: none;
+  cursor: cell;
+  width: 500px;
+  height: 50px;
+  line-height: 50px;
+  padding: 20px;
+  font-family: "CT";
+  border-radius: 15px;
+  color: black;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
+  letter-spacing: 10px;
+}
+
+.box-head:hover{
+  background: rgba(200,200,200,0.5);
+}
+
+.box:hover{
+  background: rgba(200,200,200,0.5);
+}
 
 #head{
   /* margin-right:20%; */
@@ -365,9 +408,7 @@ span{
   grid-row:3;
 }
 
-.box:hover{
-  background: rgba(200,200,200,0.5);
-}
+
 
 
 #head-4{
@@ -495,9 +536,9 @@ span{
 
 #canvasContainer{
   cursor: cell;
-  margin: 10px;
-  padding: 20px;
-  background: black;
+  margin: 0px;
+  padding: 10px;
+  /* background: black; */
   grid-column: 2;
   grid-row: 2;
 }
@@ -521,6 +562,17 @@ span{
   margin-left: 20%; */
 }
 
+#right-frame{
+  writing-mode: vertical-rl;
+  margin-right: -20px;
+  grid-column: 2;
+  grid-row: 2;
+  /* margin-bottom: -675px; */
+  /* margin-bottom: -40%;
+  margin-left: 78%; */
+}
+
+
 #pop-rect{
   z-index: 1000;
   margin: -100px;
@@ -531,19 +583,6 @@ span{
   visibility: visible;
 }
 
-
-
-
-
-
-#right-frame{
-  writing-mode: vertical-rl;
-  grid-column: 3;
-  grid-row: 2;
-  /* margin-bottom: -675px; */
-  /* margin-bottom: -40%;
-  margin-left: 78%; */
-}
 
 
 #list{

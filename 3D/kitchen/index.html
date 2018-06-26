@@ -47,11 +47,11 @@
     </a>
 
   <div id= "head">
-    <div class ="box-head" id="head-1">wellcome</div>
-    <div class ="box-head" id="head-2">to the</div>
-      <div onclick = "showHide('head-4')" class ="box-head" id="head-3">kitchen <i class="arrow left"></i></div>
+    <div class ="box-head" id="head-1">welcome</div>
+    <div onclick="arrow()"class ="box-head" id="head-2">to the</div>
+      <div onclick = "showHide('head-4')" class ="box-head" id="head-3">kitchen <i id="left"></i></div>
 
-        <div onclick = "show('head-5')" class ="box" id="head-4">the place for </div>
+        <div onclick = "show('head-5')" class ="box" id="head-4">the place for <i id="small"></i></div>
         <div onclick = "show('head-6')" class ="box" id="head-5"> making together  </div>
         <div onclick = "show('head-7')" class ="box" id="head-6"> and sharing together </div>
 
@@ -65,16 +65,16 @@
               <!-- <div onclick = "show('head-9')" class ="box" id="head-8">collaborative typeface</div>
               <div class ="box" id="head-9">sharing space</div> -->
   </div>
-  <div id= "grad">
+  <!-- <div id= "grad">
     <button onclick = "grad('color-input')" > change </button>
     <input type = "text" id="color-input" value = "write a color">
-  </div>
+  </div> -->
 
 
   <div id="notice-wrapper">
     <div id= "heading"> share events and happenings below <br> remember to write time and date <br> continue from the top</div>
     <div id= "noticeboard"> notice board </div>
-    <div id= "o"> oooooooo </div>
+    <div id= "o"> ooooooooooo </div>
     <div id= "noticeboard-0"></div>
   </div>
 
@@ -164,6 +164,16 @@
     var x = document.getElementById(name);
     var elems = document.getElementsByClassName("box");
 
+    var y = document.getElementById("left");
+
+      if (y.style.transform == "rotate(-45deg)"){
+        y.style.transform = "rotate(135deg)";
+      }
+
+      else {
+        y.style.transform = "rotate(-45deg)";
+      }
+
     if (x.style.visibility == 'visible'){
       // x.style.visibility = 'hidden';
 
@@ -190,6 +200,11 @@
         x.style.visibility = 'visible';
       }
     }
+
+
+
+
+
 
 
   </script>

@@ -154,6 +154,7 @@ body {
 
 
 .box{
+
   -webkit-user-select: none;
   cursor: cell;
   width: 500px;
@@ -163,11 +164,43 @@ body {
   font-family: "CT";
   border-radius: 15px;
   color: black;
-  text-align: right;
+  text-align: center;
   background: rgba(255, 255, 255, 0.5);
   box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
   letter-spacing: 20px;
+}
 
+.box-head{
+
+  -webkit-user-select: none;
+  cursor: cell;
+  width: 500px;
+  height: 50px;
+  line-height: 50px;
+  padding: 20px;
+  font-family: "CT";
+  border-radius: 15px;
+  color: black;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
+  letter-spacing: 20px;
+}
+
+i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    padding: 15px;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
 

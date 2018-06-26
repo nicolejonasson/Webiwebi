@@ -2,14 +2,17 @@
 // let canvas;
 let database;
 let drawing = [];
+let path = [];
 let currentPath = [];
 let isDrawing= false;
 let strokeW = 2;
 let canvas;
+let backColor = 0;
+let strokeColor = 255;
 
 
 function setup(){
-  canvas = createCanvas(900,750);
+  canvas = createCanvas(1000,800);
 
   canvas.parent("canvasContainer");
   canvas.mousePressed(startPath);
@@ -21,6 +24,11 @@ function setup(){
 
   let saveButton = select("#save");
   saveButton.mousePressed(saveDrawing);
+
+
+  let color = select("#colorCanvas");
+  color.mousePressed(colorCanvas);
+
 
   let clearButton = select ("#clear");
   clearButton.mousePressed(clearDrawing);
@@ -37,14 +45,9 @@ function setup(){
   firebase.initializeApp(config);
   database = firebase.database();
 
-  let params = getURLParams();
-  console.log(params);
-  if(params.id){
-    console.log(params.id);
-    showDrawing(params.id);
-  }
 
-  let ref = database.ref("drawings");
+
+  let ref = database.ref("DrawingCanvas");
   ref.on("value", gotData, errData);
 
 }
@@ -65,7 +68,7 @@ function endPath(){
 
 
 function draw(){
-  background(0);
+  background(backColor);
 
   if (isDrawing){
     let point = {
@@ -74,10 +77,9 @@ function draw(){
     }
     currentPath.push(point);
   }
-  stroke(255);
+  stroke(strokeColor);
   strokeWeight(5);
   noFill();
-
 
 
 
@@ -102,7 +104,7 @@ function draw(){
 
 
 function saveDrawing(){
-  let ref = database.ref("drawings");
+  let ref = database.ref("DrawingCanvas");
   let data = {
     name: "nicole",
     drawing: drawing
@@ -158,9 +160,9 @@ function showDrawing(key){
        key = this.html();
   }
 
-    // firebase.database().ref("drawings")
+    // firebase.database().ref("DrawingCanvas")
   //
-  let ref = database.ref("drawings/" + key);
+  let ref = database.ref("DrawingCanvas/" + key);
   ref.once("value", oneDrawing, errData);
 
 
@@ -178,5 +180,18 @@ function showDrawing(key){
 }
 
 function clearDrawing(){
+  console.log("clearing");
   drawing = [];
+}
+
+
+function colorCanvas(){
+  if (backColor == 0) {
+    backColor = 255;
+    strokeColor = 0;
+  }
+  else{
+    backColor = 0;
+    strokeColor = 255;
+  }
 }

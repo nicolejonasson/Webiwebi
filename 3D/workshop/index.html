@@ -64,9 +64,9 @@
 
 
     <div id= "head">
-      <div class ="box" id="head-1">wellcome</div>
-      <div class ="box" id="head-2">to the</div>
-      <div onclick = "show('head-4')" class ="box" id="head-3">workshop</div>
+      <div class ="box-head" id="head-1">wellcome</div>
+      <div class ="box-head" id="head-2">to the</div>
+      <div onclick = "showHide('head-4')" class ="box-head" id="head-3">workshop<i class="arrow right"></i></div>
 
         <div onclick = "show('head-5')" class ="box" id="head-4">join the </div>
         <div onclick = "show('head-6')" class ="box" id="head-5">collaboration </div>
@@ -224,6 +224,29 @@
 
         }
       }
+
+
+      function showHide(name){
+        var x = document.getElementById(name);
+        var elems = document.getElementsByClassName("box");
+
+        if (x.style.visibility == 'visible'){
+          // x.style.visibility = 'hidden';
+
+          for (var i = 0; i < elems.length; i++) {
+            var y = elems[i];
+            if (y.style.visibility == 'visible'){
+              y.style.visibility = 'hidden';
+            }
+          }
+
+        }
+        else{
+          x.style.visibility = 'visible';
+        }
+      }
+
+
 
       function show(name){
         var x = document.getElementById(name);

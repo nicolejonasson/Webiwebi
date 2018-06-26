@@ -59,15 +59,15 @@
     </div> -->
 
     <div class = "head">
-        <div onclick = "showBox('head-3')" class = "intro-box" id = "head-0">wellcome</div>
-        <div onclick = "showBox('head-3')" class = "intro-box" id = "head-1">you are at</div>
-        <div onclick = "showBox('head-3')" class = "intro-box" id = "head-2" >the library </div>
-        <div onclick = "showBox('head-4')" class = "intro-box" id = "head-3">a place for reading </div>
-        <div onclick = "showBox('head-5')" class = "intro-box" id = "head-4">and writing</div>
-        <div onclick = "showBox('head-6')" class = "intro-box" id = "head-5"> search for new text</div>
-        <div onclick = "showBox('head-7')" class = "intro-box" id = "head-6"> or share your own finds </div>
-        <div onclick = "showBox('head-8')" class = "intro-box" id = "head-7"> ask questions  </div>
-        <div onclick = "showBox('head-8')" class = "intro-box" id = "head-8"> and start conversations </div>
+        <div  class = "intro-box" id = "head-0">welcome</div>
+        <div  class = "intro-box" id = "head-1">you are at</div>
+        <div onclick = "showHide('head-3')" class = "intro-box" id = "head-2" >the library <i class="arrow right"></i> </div>
+        <div onclick = "showBox('head-4')" class = "box-head" id = "head-3">a place for reading </div>
+        <div onclick = "showBox('head-5')" class = "box-head" id = "head-4">and writing</div>
+        <div onclick = "showBox('head-6')" class = "box-head" id = "head-5"> search for new text</div>
+        <div onclick = "showBox('head-7')" class = "box-head" id = "head-6"> or share your own finds </div>
+        <div onclick = "showBox('head-8')" class = "box-head" id = "head-7"> ask questions  </div>
+        <div onclick = "showBox('head-8')" class = "box-head" id = "head-8"> and start conversations </div>
 
   </div>
 
@@ -137,7 +137,7 @@
       <li onclick ="firepadStyles('firepad-12')">o
         <input onblur="submitText('input-12')" type = "text" id = "input-12">
       </li>
-      <li onclick ="firepadStyles('firepad-13')">
+      <li onclick ="firepadStyles('firepad-13')">o
         <input onblur="submitText('input-13')" type = "text" id = "input-13">
       </li>
       <li onclick ="firepadStyles('firepad-14')">o
@@ -234,6 +234,9 @@
     <div class= "drag" id= "question-7"></div>
     <div class= "drag" id= "question-8"></div>
     <div class= "drag" id= "question-9"></div>
+    <div class= "drag" id= "question-10"></div>
+    <div class= "drag" id= "question-11"></div>
+    <div class= "drag" id= "question-12"></div>
   </div>
 
 
@@ -320,7 +323,7 @@
 
 
         var ref = firebase.database().ref("input-qestion");
-        ref.limitToLast(10).once("value", gotData, errData);
+        ref.limitToLast(12).once("value", gotData, errData);
 
 
           function gotData(data){
@@ -496,7 +499,25 @@ function submitText(name){
       }
     }
 
+    function showHide(name){
+      var x = document.getElementById(name);
+      var elems = document.getElementsByClassName("box-head");
 
+      if (x.style.visibility == 'visible'){
+        // x.style.visibility = 'hidden';
+
+        for (var i = 0; i < elems.length; i++) {
+          var y = elems[i];
+          if (y.style.visibility == 'visible'){
+            y.style.visibility = 'hidden';
+          }
+        }
+
+      }
+      else{
+        x.style.visibility = 'visible';
+      }
+    }
 
 
 

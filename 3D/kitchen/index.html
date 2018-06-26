@@ -39,7 +39,7 @@
 
 
   <div id= "head-bar">
-  <div>the kitchen the kitchen the kitchen the kitchen the kitchen the kitchen the kitchen the kitchen</div>
+  <div>the kitchen the kitchen the kitchen the kitchen the kitchen the kitchen the kitchen the kitchen the </div>
 </div>
 
     <a href = "../home/index.html" >
@@ -48,10 +48,10 @@
 
   <div id= "head">
     <div class ="box-head" id="head-1">welcome</div>
-    <div onclick="arrow()"class ="box-head" id="head-2">to the</div>
+    <div oonclick = "showHide('head-4')" class ="box-head" id="head-2">to the</div>
       <div onclick = "showHide('head-4')" class ="box-head" id="head-3">kitchen <i id="left"></i></div>
 
-        <div onclick = "show('head-5')" class ="box" id="head-4">the place for <i id="small"></i></div>
+        <div onclick = "show('head-5')" class ="box" id="head-4">the place for </div>
         <div onclick = "show('head-6')" class ="box" id="head-5"> making together  </div>
         <div onclick = "show('head-7')" class ="box" id="head-6"> and sharing together </div>
 
@@ -164,15 +164,15 @@
     var x = document.getElementById(name);
     var elems = document.getElementsByClassName("box");
 
-    var y = document.getElementById("left");
-
-      if (y.style.transform == "rotate(-45deg)"){
-        y.style.transform = "rotate(135deg)";
-      }
-
-      else {
-        y.style.transform = "rotate(-45deg)";
-      }
+    // var y = document.getElementById("left");
+    //
+    //   if (y.style.transform == "rotate(-45deg)"){
+    //     y.style.transform = "rotate(135deg)";
+    //   }
+    //
+    //   else {
+    //     y.style.transform = "rotate(-45deg)";
+    //   }
 
     if (x.style.visibility == 'visible'){
       // x.style.visibility = 'hidden';

@@ -11,7 +11,7 @@ html {
 body {
   /* background: linear-gradient(rgb(255, 224, 232), white, rgb(255, 224, 232)); */
   /* background: linear-gradient(rgb(215, 255, 160), white, rgb(215, 255, 160)); */
-  /* background: radial-gradient(rgb(215, 255, 160), white, rgb(215, 255, 160)); */
+  background: radial-gradient(rgb(215, 255, 160), white, rgb(215, 255, 160));
   margin: 0;
   width: 110%;
   height: 100%;

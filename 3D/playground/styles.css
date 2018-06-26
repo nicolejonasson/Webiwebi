@@ -21,7 +21,7 @@ body {
 #head-bar{
   z-index: 1000;
   padding: 5px;
-  width: 1900px;
+  width: 2100px;
   letter-spacing: 10px;
   font-family: "CT";
   position: fixed;
@@ -274,22 +274,22 @@ span{
 
 #draggable-0{
   left:35%;
-  top:175%;
+  top:170%;
 }
 
 #draggable-1{
   left:35%;
-  top:265%;
+  top:255%;
 }
 
 #draggable-2{
-  left:80%;
-  top:175%;
+  left:85%;
+  top:170%;
 }
 
 #draggable-3{
-  left:80%;
-  top:265%;
+  left:85%;
+  top:255%;
 }
 
 
@@ -544,11 +544,13 @@ i {
 }
 
 #top-frame{
+  margin-left: 0px;
   grid-column: 2;
   grid-row: 1;
 }
 
 #bottom-frame{
+  margin-left: 0px;
   grid-column: 2;
   grid-row: 3;
 }
@@ -567,6 +569,7 @@ i {
   margin-right: 0px;
   grid-column: 2;
   grid-row: 2;
+  margin-left: -200px;
   /* margin-bottom: -675px; */
   /* margin-bottom: -40%;
   margin-left: 78%; */

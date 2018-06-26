@@ -273,22 +273,22 @@ span{
 
 
 #draggable-0{
-  left:30%;
-  top:170%;
+  left:35%;
+  top:175%;
 }
 
 #draggable-1{
-  left:30%;
+  left:35%;
   top:265%;
 }
 
 #draggable-2{
-  left:90%;
-  top:170%;
+  left:80%;
+  top:175%;
 }
 
 #draggable-3{
-  left:90%;
+  left:80%;
   top:265%;
 }
 
@@ -564,7 +564,7 @@ i {
 
 #right-frame{
   writing-mode: vertical-rl;
-  margin-right: -20px;
+  margin-right: 0px;
   grid-column: 2;
   grid-row: 2;
   /* margin-bottom: -675px; */

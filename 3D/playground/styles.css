@@ -35,7 +35,7 @@ body {
 }
 
 #exit{
-  padding-top: 40px;
+  padding-top: 50px;
   z-index: 100;
   background: rgba(250, 250, 250, 0.5);
   box-shadow:  5px 5px 20px rgba(0, 0, 0, 0.1);
@@ -274,22 +274,22 @@ span{
 
 #draggable-0{
   left:35%;
-  top:170%;
+  top:168%;
 }
 
 #draggable-1{
   left:35%;
-  top:255%;
+  top:250%;
 }
 
 #draggable-2{
   left:85%;
-  top:170%;
+  top:168%;
 }
 
 #draggable-3{
   left:85%;
-  top:255%;
+  top:250%;
 }
 
 
@@ -547,12 +547,16 @@ i {
   margin-left: 0px;
   grid-column: 2;
   grid-row: 1;
+  margin-left: -100px;
+
 }
 
 #bottom-frame{
   margin-left: 0px;
   grid-column: 2;
   grid-row: 3;
+  margin-left: -100px;
+
 }
 
 #left-frame{
@@ -566,7 +570,7 @@ i {
 
 #right-frame{
   writing-mode: vertical-rl;
-  margin-right: 0px;
+  margin-right: 60px;
   grid-column: 2;
   grid-row: 2;
   margin-left: -200px;
